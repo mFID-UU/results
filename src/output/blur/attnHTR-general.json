@@ -1,0 +1,442 @@
+[
+  {
+    "level": "level_1",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.00016458281959685905,
+      "ed": 0.005840830338985116,
+      "fd_inf": 0.0001270653841040957,
+      "ed_inf": 0.005843143058667482
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 0.0016126967621445942,
+      "ed": 0.01022532780567263,
+      "fd_inf": 0.0006389589436088328,
+      "ed_inf": 0.010360717057836135
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 8.494910202117012e-05,
+      "ed": 0.0029690048465181758,
+      "fd_inf": 6.487524822914037e-05,
+      "ed_inf": 0.0030009681864617017
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 0.00442479978180188,
+      "ed": 0.02138273541753608,
+      "fd_inf": 0.0028369005012994935,
+      "ed_inf": 0.021596452268494402
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.002588900952719797,
+      "ed": 0.024842028718778282,
+      "fd_inf": 0.0021701766610815972,
+      "ed_inf": 0.025041349352008403
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 0.020407192805564023,
+      "ed": 0.049908495989873215,
+      "fd_inf": 0.010850373761558287,
+      "ed_inf": 0.0500911373672125
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.0011559400652467744,
+      "ed": 0.012587450787063956,
+      "fd_inf": 0.0008518263298993807,
+      "ed_inf": 0.0124463912805043
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 0.06287510844627775,
+      "ed": 0.09311482314248885,
+      "fd_inf": 0.04471259380048494,
+      "ed_inf": 0.09368621011871105
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.010980012231218694,
+      "ed": 0.0558090756542951,
+      "fd_inf": 0.009881518103954042,
+      "ed_inf": 0.055459910658335214
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 0.07882239225793342,
+      "ed": 0.14228140492494762,
+      "fd_inf": 0.055544493445172635,
+      "ed_inf": 0.1418709275322397
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.004438194405218976,
+      "ed": 0.028965573049301304,
+      "fd_inf": 0.003550342612241345,
+      "ed_inf": 0.02848034907663167
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 0.24218075207211598,
+      "ed": 0.2121177227701953,
+      "fd_inf": 0.19503001038377035,
+      "ed_inf": 0.21116159057047693
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.0364927388823606,
+      "ed": 0.11184162602591569,
+      "fd_inf": 0.034191122361629175,
+      "ed_inf": 0.1099255934858058
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 0.26886611003563843,
+      "ed": 0.3466088140025183,
+      "fd_inf": 0.22714501228190118,
+      "ed_inf": 0.34324088226711397
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.013594294057763356,
+      "ed": 0.059972290736666205,
+      "fd_inf": 0.011948689790535455,
+      "ed_inf": 0.05906852440849877
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 0.7362799730754119,
+      "ed": 0.4249779089049637,
+      "fd_inf": 0.6465552106971546,
+      "ed_inf": 0.4189226996845342
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.11155924359107416,
+      "ed": 0.20965265786664106,
+      "fd_inf": 0.10695342861090963,
+      "ed_inf": 0.20538671789256424
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 0.8510138588234817,
+      "ed": 0.7058521343131904,
+      "fd_inf": 0.7818541690737244,
+      "ed_inf": 0.696397283387318
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.04012538203621174,
+      "ed": 0.11675032948714092,
+      "fd_inf": 0.03712661879096894,
+      "ed_inf": 0.11481071734629644
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 2.0709045708980085,
+      "ed": 0.7858151650423386,
+      "fd_inf": 1.920327805507023,
+      "ed_inf": 0.7703676835225909
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.3232999995480732,
+      "ed": 0.36505595909116373,
+      "fd_inf": 0.31031475804900444,
+      "ed_inf": 0.35678984783595624
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 2.4653329822171415,
+      "ed": 1.2672987958717035,
+      "fd_inf": 2.3253692639979247,
+      "ed_inf": 1.242911770254776
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.1377654117659035,
+      "ed": 0.2261056587326586,
+      "fd_inf": 0.1301773881599441,
+      "ed_inf": 0.22316645961719567
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 5.688635983767384,
+      "ed": 1.3616791276911233,
+      "fd_inf": 5.374302736912941,
+      "ed_inf": 1.329254712496171
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.8122660337443119,
+      "ed": 0.56226921666371,
+      "fd_inf": 0.785738723586,
+      "ed_inf": 0.5516031864597937
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 6.1486359044133,
+      "ed": 2.001362262191344,
+      "fd_inf": 5.892704292320146,
+      "ed_inf": 1.9666881066534545
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.48227610873499094,
+      "ed": 0.39290097803524404,
+      "fd_inf": 0.4677917683984715,
+      "ed_inf": 0.3880968224383797
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 14.195619980630028,
+      "ed": 2.1419149285987618,
+      "fd_inf": 13.665445990176316,
+      "ed_inf": 2.0964882105068114
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.3748373851505447,
+      "ed": 0.7172074409270919,
+      "fd_inf": 1.3466129968149292,
+      "ed_inf": 0.7077358284900291
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 10.63115094248592,
+      "ed": 2.5820658086194173,
+      "fd_inf": 10.342054659207651,
+      "ed_inf": 2.5495613659459955
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.93553834443604,
+      "ed": 0.5396103939117348,
+      "fd_inf": 0.9265064681212047,
+      "ed_inf": 0.5360658214096677
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 24.924297603579888,
+      "ed": 2.8370428221919566,
+      "fd_inf": 24.31154776147074,
+      "ed_inf": 2.7907793080863135
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.7459349818401346,
+      "ed": 0.8281955511017614,
+      "fd_inf": 1.7230286362700478,
+      "ed_inf": 0.8194790644924455
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 13.4155896916728,
+      "ed": 2.8615059814120714,
+      "fd_inf": 13.167746142838501,
+      "ed_inf": 2.8345095295559277
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 1.151337321950822,
+      "ed": 0.6245746620863772,
+      "fd_inf": 1.145372955765927,
+      "ed_inf": 0.6215888869973549
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 32.60256284867786,
+      "ed": 3.348115032947944,
+      "fd_inf": 32.060326723692135,
+      "ed_inf": 3.3033353633815485
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-general",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.034832530763245,
+      "ed": 0.9365364124384575,
+      "fd_inf": 2.0135220173152586,
+      "ed_inf": 0.9282577131151467
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-general",
+    "pooling": "max",
+    "metrics": {
+      "fd": 14.992491848868498,
+      "ed": 3.0041967035076085,
+      "fd_inf": 14.751083115185708,
+      "ed_inf": 2.979312511800596
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-general",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 1.2575963242576418,
+      "ed": 0.6888633790584281,
+      "fd_inf": 1.2528655044861297,
+      "ed_inf": 0.6859664817586052
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-general",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 38.190293446893875,
+      "ed": 3.7838278211569167,
+      "fd_inf": 37.64138134307792,
+      "ed_inf": 3.739892539219948
+    }
+  }
+]

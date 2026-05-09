@@ -1,0 +1,442 @@
+[
+  {
+    "level": "level_1",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.23768125123298844,
+      "ed": 0.4013426339952088,
+      "fd_inf": 0.2323261296035139,
+      "ed_inf": 0.3988765730773923
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 1.6001397893944613,
+      "ed": 0.7255377350071164,
+      "fd_inf": 1.2267211598848011,
+      "ed_inf": 0.7191261636900271
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.02843519064734501,
+      "ed": 0.13900493740802747,
+      "fd_inf": 0.02766538552342671,
+      "ed_inf": 0.13780183663173903
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 2.714547202276947,
+      "ed": 1.2995351522298477,
+      "fd_inf": 2.649156268521963,
+      "ed_inf": 1.2941616076185145
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.13212192622176389,
+      "ed": 0.27556905641884355,
+      "fd_inf": 0.12345218667558165,
+      "ed_inf": 0.27013397186988514
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 1.085865892811512,
+      "ed": 0.48979559824279095,
+      "fd_inf": 0.6561326950782685,
+      "ed_inf": 0.47985797204476854
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.017085928614408274,
+      "ed": 0.10190276133425934,
+      "fd_inf": 0.01606857736962131,
+      "ed_inf": 0.10019495483026619
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 1.5100276947867428,
+      "ed": 0.9106290243966294,
+      "fd_inf": 1.4079122313548689,
+      "ed_inf": 0.8973293597230697
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.38853066547176596,
+      "ed": 0.5106444509242025,
+      "fd_inf": 0.37463382532119077,
+      "ed_inf": 0.5042745906255524
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 2.6145502664495552,
+      "ed": 0.9301591057341175,
+      "fd_inf": 2.075771519669003,
+      "ed_inf": 0.918800055298252
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.04926329842778854,
+      "ed": 0.18286108710352475,
+      "fd_inf": 0.047480186635126605,
+      "ed_inf": 0.18065340574501204
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 4.316438850820305,
+      "ed": 1.638640829780494,
+      "fd_inf": 4.159490069093481,
+      "ed_inf": 1.622194569349133
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.27615804403690447,
+      "ed": 0.4017429554828192,
+      "fd_inf": 0.26154542202056585,
+      "ed_inf": 0.3943282359593922
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 1.9657228352075435,
+      "ed": 0.7327171381882044,
+      "fd_inf": 1.4172053902653048,
+      "ed_inf": 0.7195274335887363
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.038266246800054304,
+      "ed": 0.15659646508314615,
+      "fd_inf": 0.03669390857763152,
+      "ed_inf": 0.1546498292741213
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 3.0314012493346354,
+      "ed": 1.304177946574484,
+      "fd_inf": 2.8666050766739177,
+      "ed_inf": 1.2837625281512013
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.909972943267114,
+      "ed": 0.7718881799391045,
+      "fd_inf": 0.8837272710696338,
+      "ed_inf": 0.763198159708131
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 5.514162916639549,
+      "ed": 1.4571643672019505,
+      "fd_inf": 4.777487049448999,
+      "ed_inf": 1.441110480840337
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.11314883694578004,
+      "ed": 0.2770105742197157,
+      "fd_inf": 0.11005897346276752,
+      "ed_inf": 0.27441718282282257
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 9.818916449866833,
+      "ed": 2.4711765425449803,
+      "fd_inf": 9.530233095604101,
+      "ed_inf": 2.447676355969306
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.6617320595919836,
+      "ed": 0.6046137332200328,
+      "fd_inf": 0.6398552681186687,
+      "ed_inf": 0.5991366590015488
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 3.88284065779942,
+      "ed": 1.0856231601217023,
+      "fd_inf": 3.1016250179736566,
+      "ed_inf": 1.0726347550039483
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.09042805109858776,
+      "ed": 0.23918299257665449,
+      "fd_inf": 0.08820035024463123,
+      "ed_inf": 0.23811743784751302
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 7.673503608952501,
+      "ed": 2.074618798922785,
+      "fd_inf": 7.412721845858269,
+      "ed_inf": 2.0583829761689483
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.9409428493720995,
+      "ed": 0.7515454145456419,
+      "fd_inf": 0.9113835960442043,
+      "ed_inf": 0.7434687121921006
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 5.657689982222706,
+      "ed": 1.4183275499424572,
+      "fd_inf": 4.826540259082255,
+      "ed_inf": 1.404006278155078
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.12747525986717223,
+      "ed": 0.2899684470888333,
+      "fd_inf": 0.1244050361670148,
+      "ed_inf": 0.2881539030652118
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 10.516843880033434,
+      "ed": 2.497643201903724,
+      "fd_inf": 10.172472272799824,
+      "ed_inf": 2.4735244768030302
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.9264170162591547,
+      "ed": 0.7177026914553617,
+      "fd_inf": 0.9014727572877286,
+      "ed_inf": 0.7125857812199612
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 5.155492647746257,
+      "ed": 1.2813266861582024,
+      "fd_inf": 4.3188235921565825,
+      "ed_inf": 1.2686784415489734
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.1365458521830787,
+      "ed": 0.29897810869231667,
+      "fd_inf": 0.13402216656506344,
+      "ed_inf": 0.298173273252571
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 10.592706335930757,
+      "ed": 2.4400839235257417,
+      "fd_inf": 10.27982497339854,
+      "ed_inf": 2.420668546958934
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.498259246012129,
+      "ed": 0.9458536818479695,
+      "fd_inf": 1.4677657067440668,
+      "ed_inf": 0.9394981074222302
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 8.541142936908756,
+      "ed": 1.8286000775695113,
+      "fd_inf": 7.649698996813436,
+      "ed_inf": 1.8172414894750082
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.20190971509609046,
+      "ed": 0.3670539237947361,
+      "fd_inf": 0.19854489964876365,
+      "ed_inf": 0.365793225770979
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 16.411729555997454,
+      "ed": 3.1149575239290326,
+      "fd_inf": 16.025590261058944,
+      "ed_inf": 3.0930331051064908
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "trocr-base",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.670860268492408,
+      "ed": 0.9781376874933071,
+      "fd_inf": 1.6458549593114802,
+      "ed_inf": 0.9750453017323347
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "trocr-base",
+    "pooling": "max",
+    "metrics": {
+      "fd": 8.430761840417901,
+      "ed": 1.738746624398851,
+      "fd_inf": 7.488910234911019,
+      "ed_inf": 1.7321069354169443
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "trocr-base",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.23592598146840116,
+      "ed": 0.3959246584917276,
+      "fd_inf": 0.2336799465760171,
+      "ed_inf": 0.3961103526408419
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "trocr-base",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 18.296892554501028,
+      "ed": 3.2429417614489595,
+      "fd_inf": 17.947666505870146,
+      "ed_inf": 3.227981452703093
+    }
+  }
+]

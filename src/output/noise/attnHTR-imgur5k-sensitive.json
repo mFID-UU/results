@@ -1,0 +1,442 @@
+[
+  {
+    "level": "level_1",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.6649462005891307,
+      "ed": 0.5760736503914974,
+      "fd_inf": 0.6769331541509357,
+      "ed_inf": 0.5830422574729248
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 1.111898666985585,
+      "ed": 0.6431867784486601,
+      "fd_inf": 1.1034902388516425,
+      "ed_inf": 0.6496763905858917
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.6317772380137208,
+      "ed": 0.6712698355760226,
+      "fd_inf": 0.6290158281778992,
+      "ed_inf": 0.6698896305961335
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 9.56776592418754,
+      "ed": 1.981643959832998,
+      "fd_inf": 9.652343436075057,
+      "ed_inf": 2.003053274546684
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.9045095022502343,
+      "ed": 0.6840900980277441,
+      "fd_inf": 0.9186577629781921,
+      "ed_inf": 0.6916778512033236
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 1.6373656399868786,
+      "ed": 0.8139204945019833,
+      "fd_inf": 1.61392586105524,
+      "ed_inf": 0.8183738496064425
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 1.005440078868248,
+      "ed": 0.8589997092429034,
+      "fd_inf": 0.999151144988444,
+      "ed_inf": 0.8565490511824656
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 13.44784552626129,
+      "ed": 2.4063769498075085,
+      "fd_inf": 13.53002164969139,
+      "ed_inf": 2.430861433343041
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.0478816126449981,
+      "ed": 0.7380079606993483,
+      "fd_inf": 1.0649043994716876,
+      "ed_inf": 0.7456596679395342
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 2.1714642557063364,
+      "ed": 0.993688838543891,
+      "fd_inf": 2.128191211692381,
+      "ed_inf": 0.9923921997890737
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 1.30228206176912,
+      "ed": 0.975399506750481,
+      "fd_inf": 1.2962264749901617,
+      "ed_inf": 0.9731179962215919
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 16.159101293427184,
+      "ed": 2.668407396197449,
+      "fd_inf": 16.225983665821055,
+      "ed_inf": 2.6914527497255447
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.1506145976988407,
+      "ed": 0.7789237430251686,
+      "fd_inf": 1.1658074905759286,
+      "ed_inf": 0.785198106135763
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 3.0297740495284557,
+      "ed": 1.2902383336821532,
+      "fd_inf": 2.9470626543051237,
+      "ed_inf": 1.2791918857337472
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 1.508046401348563,
+      "ed": 1.0401013899964675,
+      "fd_inf": 1.5014636740905363,
+      "ed_inf": 1.0377528883354694
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 18.698540127417544,
+      "ed": 2.904698723265096,
+      "fd_inf": 18.710876226928942,
+      "ed_inf": 2.9231326471895307
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.301169128464231,
+      "ed": 0.828542157254542,
+      "fd_inf": 1.3125258438447223,
+      "ed_inf": 0.8331205917434279
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 4.762069515170268,
+      "ed": 1.7577910193531059,
+      "fd_inf": 4.629646590479262,
+      "ed_inf": 1.7393482853829445
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 1.6520181347081546,
+      "ed": 1.0734334631692353,
+      "fd_inf": 1.6449772738897273,
+      "ed_inf": 1.0707579859676346
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 22.146291830049734,
+      "ed": 3.1794843217925255,
+      "fd_inf": 22.09157303500756,
+      "ed_inf": 3.192959733489057
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.5404278426038855,
+      "ed": 0.8977862562939916,
+      "fd_inf": 1.5456990883799482,
+      "ed_inf": 0.9014482161068398
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 7.537460275191766,
+      "ed": 2.3228730820462045,
+      "fd_inf": 7.345850153590501,
+      "ed_inf": 2.299545854551598
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 1.7856355470912662,
+      "ed": 1.0947597994440363,
+      "fd_inf": 1.7774610800483808,
+      "ed_inf": 1.0924079939601914
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 26.595303435208095,
+      "ed": 3.482469931639525,
+      "fd_inf": 26.465112849129433,
+      "ed_inf": 3.4936559326786543
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.8511246727310606,
+      "ed": 0.9740714034274732,
+      "fd_inf": 1.8500148632851576,
+      "ed_inf": 0.9762664149938212
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 11.30426895583858,
+      "ed": 2.9230399862982774,
+      "fd_inf": 11.064124709727912,
+      "ed_inf": 2.8977127804312777
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 1.9456306781575132,
+      "ed": 1.1215859614683028,
+      "fd_inf": 1.9363136784682238,
+      "ed_inf": 1.11908058218022
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 31.46953230173648,
+      "ed": 3.7587608648168627,
+      "fd_inf": 31.23554557136639,
+      "ed_inf": 3.7646574078961725
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.2184586005054943,
+      "ed": 1.0571909173567138,
+      "fd_inf": 2.208386839860316,
+      "ed_inf": 1.0572732386899288
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 15.708083681597753,
+      "ed": 3.4933597561205376,
+      "fd_inf": 15.391583156145717,
+      "ed_inf": 3.4626822379255153
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 2.054370798160768,
+      "ed": 1.1263242510562432,
+      "fd_inf": 2.0449661486562,
+      "ed_inf": 1.123811872830778
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 36.977944429947925,
+      "ed": 4.038180688059087,
+      "fd_inf": 36.6100791030164,
+      "ed_inf": 4.03679640619494
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.6210306231733904,
+      "ed": 1.142939639366199,
+      "fd_inf": 2.6068991282622527,
+      "ed_inf": 1.1421439341808937
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 20.351297720944743,
+      "ed": 3.996281898563265,
+      "fd_inf": 19.999424410224375,
+      "ed_inf": 3.9647730816206557
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 2.163215570822868,
+      "ed": 1.1341177031158263,
+      "fd_inf": 2.154423055156176,
+      "ed_inf": 1.131199174066364
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 43.108705432654894,
+      "ed": 4.32917115730545,
+      "fd_inf": 42.67705851037357,
+      "ed_inf": 4.324191974717289
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.9984137465260243,
+      "ed": 1.2199739080183696,
+      "fd_inf": 2.9827605608535515,
+      "ed_inf": 1.218512973848763
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 24.90430955828035,
+      "ed": 4.427754221863715,
+      "fd_inf": 24.52319777732562,
+      "ed_inf": 4.395616958453423
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 2.277927760148394,
+      "ed": 1.149625025353472,
+      "fd_inf": 2.268431369061352,
+      "ed_inf": 1.146614362992438
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-imgur5k-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 48.84265856337335,
+      "ed": 4.583096541150864,
+      "fd_inf": 48.38614232677485,
+      "ed_inf": 4.575185967825365
+    }
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "level": "level_1",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.9978798969956146,
+      "psnr": 38.97500182317718
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.9868368644123321,
+      "psnr": 29.95001102992104
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.9746909621701698,
+      "psnr": 26.91643145659587
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.961519659122893,
+      "psnr": 24.993741048305655
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.9492978314679997,
+      "psnr": 23.73363068332872
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.9385499647748065,
+      "psnr": 22.839307188108585
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.9291186197401847,
+      "psnr": 22.152506427928355
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.9219349607280601,
+      "psnr": 21.661440850123952
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.9167427205918154,
+      "psnr": 21.316380084079082
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "pixel",
+    "pooling": "none",
+    "metrics": {
+      "ssim": 0.91287916147132,
+      "psnr": 21.049702206415784
+    }
+  }
+]

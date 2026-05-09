@@ -1,0 +1,1526 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>mFID</title>
+        <script
+            src="https://cdn.plot.ly/plotly-2.27.0.min.js"
+            charset="utf-8"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --bg: #f6f6f7;
+                --surface: #ffffff;
+                --border: #e4e4e7;
+                --faint-b: #f0f0f2;
+                --text: #18181b;
+                --muted: #71717a;
+                --faint: #a1a1aa;
+                --accent: #3b82f6;
+                --font: "Inter", system-ui, -apple-system, sans-serif;
+                --mono: "JetBrains Mono", "SF Mono", "Consolas", monospace;
+            }
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html,
+            body {
+                height: 100%;
+                font-family: var(--font);
+                font-size: 13px;
+                color: var(--text);
+                background: var(--bg);
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .shell {
+                display: flex;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            /* ── Left sidebar ── */
+            .sidebar {
+                width: 254px;
+                min-width: 254px;
+                height: 100%;
+                background: var(--surface);
+                border-right: 1px solid var(--border);
+                overflow-y: auto;
+                overflow-x: hidden;
+                scrollbar-width: thin;
+                scrollbar-color: var(--border) transparent;
+            }
+            .sidebar::-webkit-scrollbar {
+                width: 4px;
+            }
+            .sidebar::-webkit-scrollbar-thumb {
+                background: var(--border);
+                border-radius: 2px;
+            }
+
+            /* ── Right panel ── */
+            .rightbar {
+                width: 280px;
+                min-width: 280px;
+                height: 100%;
+                background: var(--surface);
+                border-left: 1px solid var(--border);
+                overflow-y: auto;
+                overflow-x: hidden;
+                scrollbar-width: thin;
+                scrollbar-color: var(--border) transparent;
+            }
+            .rightbar::-webkit-scrollbar {
+                width: 4px;
+            }
+            .rightbar::-webkit-scrollbar-thumb {
+                background: var(--border);
+                border-radius: 2px;
+            }
+
+            .sb-sec {
+                padding: 13px;
+                border-bottom: 1px solid var(--faint-b);
+            }
+            .sb-sec:last-child {
+                border-bottom: none;
+            }
+            .sb-lbl {
+                font-size: 10px;
+                font-weight: 600;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--faint);
+                margin-bottom: 9px;
+            }
+
+            select {
+                width: 100%;
+                padding: 5px 8px;
+                border: 1px solid var(--border);
+                border-radius: 4px;
+                background: var(--bg);
+                color: var(--text);
+                font-family: var(--font);
+                font-size: 12px;
+                cursor: pointer;
+                outline: none;
+            }
+            select:hover {
+                border-color: #c4c4cc;
+            }
+            select:focus {
+                border-color: var(--accent);
+            }
+
+            /* model rows */
+            .mrow {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 3px 4px;
+                border-radius: 3px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .mrow:hover {
+                background: var(--bg);
+            }
+            .mrow input[type="checkbox"] {
+                width: 12px;
+                height: 12px;
+                margin: 0;
+                cursor: pointer;
+                accent-color: var(--accent);
+                flex-shrink: 0;
+            }
+            .pip {
+                width: 8px;
+                height: 8px;
+                border-radius: 2px;
+                flex-shrink: 0;
+            }
+            .mname {
+                font-family: var(--mono);
+                font-size: 10.5px;
+                line-height: 1;
+            }
+
+            .px-divider {
+                border: none;
+                border-top: 1px solid var(--faint-b);
+                margin: 6px 0 4px;
+            }
+
+            .px-row {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 3px 4px;
+                border-radius: 3px;
+                user-select: none;
+            }
+            .px-row input[type="checkbox"] {
+                width: 12px;
+                height: 12px;
+                margin: 0;
+                cursor: pointer;
+                accent-color: var(--accent);
+                flex-shrink: 0;
+            }
+            .invert-btn {
+                margin-left: auto;
+                font-size: 9.5px;
+                font-family: var(--mono);
+                color: var(--faint);
+                background: none;
+                border: 1px solid var(--border);
+                border-radius: 3px;
+                padding: 1px 5px;
+                cursor: pointer;
+                line-height: 1.5;
+                white-space: nowrap;
+            }
+            .invert-btn.active {
+                color: var(--accent);
+                border-color: var(--accent);
+                background: #eff6ff;
+            }
+
+            .pool-row {
+                display: none;
+                gap: 8px;
+                padding: 2px 4px 5px 30px;
+            }
+            .pool-row.active {
+                display: flex;
+            }
+            .ptog {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .ptog input {
+                width: 10px;
+                height: 10px;
+                margin: 0;
+                cursor: pointer;
+                accent-color: var(--accent);
+            }
+            .ptog span {
+                font-family: var(--mono);
+                font-size: 9.5px;
+                color: var(--muted);
+            }
+
+            .radio-row {
+                display: flex;
+                gap: 18px;
+            }
+            .rit {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .rit input {
+                width: 12px;
+                height: 12px;
+                margin: 0;
+                cursor: pointer;
+                accent-color: var(--accent);
+            }
+            .rit span {
+                font-size: 12px;
+            }
+
+            .hint {
+                margin-top: 7px;
+                font-size: 10.5px;
+                color: var(--faint);
+                line-height: 1.55;
+            }
+            .hint code {
+                font-family: var(--mono);
+                font-size: 9.5px;
+                background: var(--bg);
+                padding: 0 3px;
+                border-radius: 2px;
+            }
+
+            #ref-level-row {
+                margin-top: 7px;
+                display: none;
+            }
+            #ref-level-row.visible {
+                display: block;
+            }
+
+            /* ── Legend ── */
+            .leg-item {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 2px 0;
+                min-width: 0;
+            }
+            .leg-nm {
+                font-family: var(--mono);
+                font-size: 9.5px;
+                color: var(--text);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-width: 0;
+            }
+
+            /* ── Stats table ── */
+            .stbl-wrap {
+                overflow-x: auto;
+            }
+            .stbl {
+                width: 100%;
+                border-collapse: collapse;
+                font-family: var(--mono);
+                font-size: 9px;
+                table-layout: fixed;
+            }
+            .stbl thead th {
+                font-weight: 500;
+                color: var(--faint);
+                text-align: right;
+                padding: 2px 3px 4px;
+                border-bottom: 1px solid var(--border);
+                font-size: 8.5px;
+                cursor: help;
+                white-space: nowrap;
+            }
+            .stbl thead th:first-child {
+                text-align: left;
+                width: 42%;
+            }
+            .stbl tbody td {
+                padding: 2px 3px;
+                border-bottom: 1px solid var(--faint-b);
+                text-align: right;
+                color: var(--muted);
+            }
+            .stbl tbody td:first-child {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .stbl tbody tr:last-child td {
+                border-bottom: none;
+            }
+            .spip {
+                width: 5px;
+                height: 5px;
+                border-radius: 1px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 3px;
+                flex-shrink: 0;
+            }
+            .sg {
+                color: #15803d;
+                font-weight: 500;
+            }
+            .sy {
+                color: #b45309;
+            }
+            .sr {
+                color: #dc2626;
+            }
+            .no-data {
+                font-family: var(--mono);
+                font-size: 9.5px;
+                color: var(--faint);
+            }
+
+            /* ── Main ── */
+            .main {
+                flex: 1;
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+                padding: 11px 16px;
+                gap: 9px;
+                overflow: hidden;
+            }
+            .banner {
+                flex-shrink: 0;
+                background: #fef9c3;
+                border: 1px solid #fde68a;
+                border-radius: 4px;
+                padding: 8px 12px;
+                font-size: 11.5px;
+                color: #78350f;
+                line-height: 1.6;
+            }
+            .banner code {
+                font-family: var(--mono);
+                font-size: 10.5px;
+            }
+            .plot-card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 4px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+            .fd-card,
+            .ed-card {
+                flex: 1;
+                min-height: 0;
+            }
+            .card-head {
+                flex-shrink: 0;
+                display: flex;
+                align-items: baseline;
+                gap: 8px;
+                padding: 9px 13px 0;
+            }
+            .mtag {
+                font-family: var(--mono);
+                font-size: 10.5px;
+                font-weight: 500;
+                background: var(--bg);
+                border: 1px solid var(--border);
+                border-radius: 3px;
+                padding: 1px 6px;
+                color: var(--text);
+            }
+            .mdesc {
+                font-size: 11px;
+                color: var(--faint);
+            }
+            .plot-div {
+                flex: 1;
+                min-height: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="shell">
+            <aside class="sidebar">
+                <div class="sb-sec">
+                    <div class="sb-lbl">Degradation Type</div>
+                    <select id="sel-ds">
+                        <option value="noise">noise</option>
+                        <option value="blur">blur</option>
+                        <option value="erosion">erosion</option>
+                        <option value="dilation">dilation</option>
+                        <option value="rotation">rotation</option>
+                    </select>
+                </div>
+
+                <div class="sb-sec">
+                    <div class="sb-lbl">Plots</div>
+                    <div class="radio-row">
+                        <label class="rit"
+                            ><input
+                                type="checkbox"
+                                id="cb-show-fd"
+                                checked
+                            /><span>FD</span></label
+                        >
+                        <label class="rit"
+                            ><input
+                                type="checkbox"
+                                id="cb-show-ed"
+                                checked
+                            /><span>ED</span></label
+                        >
+                    </div>
+                </div>
+
+                <div class="sb-sec">
+                    <div class="sb-lbl">Models</div>
+                    <div id="model-list"></div>
+                </div>
+
+                <div class="sb-sec">
+                    <div class="sb-lbl">Y-axis Scale</div>
+                    <div class="radio-row">
+                        <label class="rit"
+                            ><input
+                                type="radio"
+                                name="ys"
+                                value="linear"
+                                checked
+                            /><span>Linear</span></label
+                        >
+                        <label class="rit"
+                            ><input type="radio" name="ys" value="log" /><span
+                                >Log</span
+                            ></label
+                        >
+                    </div>
+                </div>
+
+                <div class="sb-sec">
+                    <div class="sb-lbl">Scale / Normalisation</div>
+                    <select id="sel-norm">
+                        <option value="none">none — raw values</option>
+                        <option value="ref">÷ reference level</option>
+                        <option value="divmax">÷ max value [0 → 1]</option>
+                        <option value="minmax">min–max [0 → 1]</option>
+                        <option value="zscore">z-score [μ=0, σ=1]</option>
+                    </select>
+                    <div id="ref-level-row">
+                        <select id="sel-ref">
+                            <option value="1">level 1</option>
+                            <option value="2">level 2</option>
+                            <option value="3">level 3</option>
+                            <option value="4">level 4</option>
+                            <option value="5">level 5</option>
+                            <option value="6">level 6</option>
+                            <option value="7">level 7</option>
+                            <option value="8">level 8</option>
+                            <option value="9">level 9</option>
+                            <option value="10">level 10</option>
+                        </select>
+                    </div>
+                    <p class="hint" id="norm-hint"></p>
+                </div>
+            </aside>
+
+            <main class="main">
+                <div class="banner" id="banner" style="display: none"></div>
+
+                <div class="plot-card fd-card" id="fd-card">
+                    <div class="card-head">
+                        <span class="mtag">FD</span>
+                        <span class="mdesc" id="fd-desc">Fréchet Distance</span>
+                    </div>
+                    <div class="plot-div" id="plot-fd"></div>
+                </div>
+
+                <div class="plot-card ed-card" id="ed-card">
+                    <div class="card-head">
+                        <span class="mtag">ED</span>
+                        <span class="mdesc" id="ed-desc"
+                            >Euclidean Distance</span
+                        >
+                    </div>
+                    <div class="plot-div" id="plot-ed"></div>
+                </div>
+            </main>
+
+            <aside class="rightbar">
+                <div class="sb-sec">
+                    <div class="sb-lbl">Legend</div>
+                    <div id="cust-legend"></div>
+                </div>
+                <div class="sb-sec" id="stats-fd-sec">
+                    <div class="sb-lbl">FD — series stats</div>
+                    <div class="stbl-wrap"><div id="stats-fd"></div></div>
+                </div>
+                <div class="sb-sec" id="stats-ed-sec">
+                    <div class="sb-lbl">ED — series stats</div>
+                    <div class="stbl-wrap"><div id="stats-ed"></div></div>
+                </div>
+            </aside>
+        </div>
+
+        <script>
+            // ── Constants ─────────────────────────────────────────────────────────────────
+
+            const DATA_BASE = "src/output";
+            const POOLINGS = ["cls", "mean", "max", "tpp"];
+
+            const FEAT_MODELS = [
+                "inceptionv3",
+                "hwd",
+                "dinov3",
+                "trocr-base",
+                "trocr-large",
+                "trocr-riksarkivet",
+                "attnHTR-general",
+                "attnHTR-general-sensitive",
+                "attnHTR-iam",
+                "attnHTR-iam-sensitive",
+                "attnHTR-imgur5k",
+                "attnHTR-imgur5k-sensitive",
+            ];
+
+            const FLAT_SET = new Set(["inceptionv3", "hwd", "dinov3"]);
+            const SEQ_SET = new Set(
+                FEAT_MODELS.filter((id) => !FLAT_SET.has(id)),
+            );
+
+            const MODEL_COLOR = {
+                inceptionv3: "#1668bd",
+                hwd: "#4a9fd4",
+                dinov3: "#88c9e8",
+                "trocr-base": "#b5251e",
+                "trocr-large": "#d9584e",
+                "trocr-riksarkivet": "#f09080",
+                "attnHTR-general": "#0d7c6e",
+                "attnHTR-general-sensitive": "#2cb5a2",
+                "attnHTR-iam": "#2a6e3f",
+                "attnHTR-iam-sensitive": "#4db86a",
+                "attnHTR-imgur5k": "#b35c00",
+                "attnHTR-imgur5k-sensitive": "#e58c28",
+            };
+
+            const POOL_DASH = {
+                flat: "solid",
+                mean: "solid",
+                max: "dash",
+                cls: "dot",
+                tpp: "dashdot",
+            };
+            const POOL_SYMBOL = {
+                flat: "circle",
+                mean: "circle",
+                max: "diamond",
+                cls: "square",
+                tpp: "triangle-up",
+            };
+
+            const PIXEL_CFG = [
+                {
+                    key: "psnr",
+                    label: "PSNR (dB)",
+                    showKey: "showPsnr",
+                    flipKey: "flipPsnr",
+                    color: "#f59e0b",
+                    dash: "dot",
+                    sym: "diamond-open",
+                },
+                {
+                    key: "ssim",
+                    label: "SSIM",
+                    showKey: "showSsim",
+                    flipKey: "flipSsim",
+                    color: "#8b5cf6",
+                    dash: "dashdot",
+                    sym: "circle-open",
+                },
+            ];
+
+            // SVG stroke-dasharray values for each line style
+            const SVG_DASH = {
+                solid: "",
+                dash: "5 3",
+                dot: "1.5 2.5",
+                dashdot: "5 2 1.5 2",
+            };
+
+            const NORM_HINTS = {
+                none: "",
+                ref: "Divides every value by the score at the selected level. Values < 1 appear negative on log scale.",
+                divmax: "Divides each series by its own maximum, scaling it to [0 → 1]. Makes slopes directly comparable.",
+                minmax: "Maps each series to [0 → 1] based on its own min and max.",
+                zscore: "Subtracts the mean and divides by the std dev of each series.",
+            };
+
+            // ── localStorage helpers ──────────────────────────────────────────────────────
+
+            function lsGet(key, fallback) {
+                try {
+                    const v = localStorage.getItem(key);
+                    return v === null ? fallback : v;
+                } catch (_) {
+                    return fallback;
+                }
+            }
+            function lsSet(key, val) {
+                try {
+                    localStorage.setItem(key, val);
+                } catch (_) {}
+            }
+
+            // ── State ─────────────────────────────────────────────────────────────────────
+
+            function loadMpools() {
+                const m = new Map();
+                for (const id of SEQ_SET) {
+                    const saved = lsGet(`mfid_pool_${id}`, null);
+                    m.set(
+                        id,
+                        saved === null
+                            ? new Set()
+                            : new Set(
+                                  saved
+                                      .split(",")
+                                      .filter((p) => POOLINGS.includes(p)),
+                              ),
+                    );
+                }
+                return m;
+            }
+
+            const S = {
+                dataset: "noise",
+                enabled: new Set(["inceptionv3"]),
+                mpools: loadMpools(),
+                showPsnr: false,
+                showSsim: false,
+                flipPsnr: false,
+                flipSsim: false,
+                yScale: "linear",
+                norm: "none",
+                refLevel: 1,
+                showFd: true,
+                showEd: true,
+            };
+
+            // ── Cache ─────────────────────────────────────────────────────────────────────
+
+            const CACHE = {};
+
+            async function fetchOne(ds, id) {
+                const key = `${ds}/${id}`;
+                if (key in CACHE) return CACHE[key];
+                try {
+                    const r = await fetch(`${DATA_BASE}/${ds}/${id}.json`);
+                    CACHE[key] = r.ok ? await r.json() : null;
+                } catch (_) {
+                    CACHE[key] = null;
+                }
+                return CACHE[key];
+            }
+
+            async function loadAll(ds) {
+                await Promise.all(
+                    [...FEAT_MODELS, "pixel"].map((id) => fetchOne(ds, id)),
+                );
+            }
+
+            // ── Normalisation ─────────────────────────────────────────────────────────────
+
+            function applyNorm(ys, lvlMap) {
+                switch (S.norm) {
+                    case "ref": {
+                        const ref = lvlMap.get(S.refLevel);
+                        if (ref == null || ref === 0) return null;
+                        return ys.map((v) => v / ref);
+                    }
+                    case "divmax": {
+                        const mx = Math.max(...ys);
+                        return mx === 0 ? ys : ys.map((v) => v / mx);
+                    }
+                    case "minmax": {
+                        const mn = Math.min(...ys),
+                            mx = Math.max(...ys),
+                            r = mx - mn;
+                        return r === 0
+                            ? ys.map(() => 0)
+                            : ys.map((v) => (v - mn) / r);
+                    }
+                    case "zscore": {
+                        const mean = ys.reduce((a, b) => a + b, 0) / ys.length;
+                        const std = Math.sqrt(
+                            ys.reduce((a, b) => a + (b - mean) ** 2, 0) /
+                                ys.length,
+                        );
+                        return std === 0
+                            ? ys.map(() => 0)
+                            : ys.map((v) => (v - mean) / std);
+                    }
+                    default:
+                        return ys;
+                }
+            }
+
+            function invertYs(ys) {
+                const mx = Math.max(...ys);
+                return ys.map((v) => mx - v);
+            }
+
+            // ── Statistics (computed on raw pre-norm values) ───────────────────────────────
+
+            function rankArray(arr) {
+                const idx = arr
+                    .map((v, i) => ({ v, i }))
+                    .sort((a, b) => a.v - b.v);
+                const r = new Array(arr.length);
+                idx.forEach(({ i }, k) => {
+                    r[i] = k + 1;
+                });
+                return r;
+            }
+
+            // Absolute Spearman ρ — direction-agnostic (PSNR decreases, FD increases, both can be 1.0)
+            function spearman(ys) {
+                const n = ys.length;
+                if (n < 2) return NaN;
+                const rX = Array.from({ length: n }, (_, i) => i + 1);
+                const rY = rankArray(ys);
+                const mX = (n + 1) / 2,
+                    mY = rY.reduce((a, b) => a + b, 0) / n;
+                let num = 0,
+                    dX = 0,
+                    dY = 0;
+                for (let i = 0; i < n; i++) {
+                    num += (rX[i] - mX) * (rY[i] - mY);
+                    dX += (rX[i] - mX) ** 2;
+                    dY += (rY[i] - mY) ** 2;
+                }
+                return Math.abs(num / Math.sqrt(dX * dY));
+            }
+
+            // R² of linear fit — direction-agnostic
+            function linearR2(ys) {
+                const n = ys.length;
+                if (n < 2) return NaN;
+                const xs = Array.from({ length: n }, (_, i) => i + 1);
+                const mX = (n + 1) / 2,
+                    mY = ys.reduce((a, b) => a + b, 0) / n;
+                let sXY = 0,
+                    sXX = 0;
+                for (let i = 0; i < n; i++) {
+                    sXY += (xs[i] - mX) * (ys[i] - mY);
+                    sXX += (xs[i] - mX) ** 2;
+                }
+                const slope = sXY / sXX,
+                    icpt = mY - slope * mX;
+                let sTot = 0,
+                    sRes = 0;
+                for (let i = 0; i < n; i++) {
+                    sTot += (ys[i] - mY) ** 2;
+                    sRes += (ys[i] - (slope * xs[i] + icpt)) ** 2;
+                }
+                return sTot === 0 ? 1 : 1 - sRes / sTot;
+            }
+
+            // Fraction of steps in dominant direction — direction-agnostic
+            function monotonicity(ys) {
+                if (ys.length < 2) return NaN;
+                let up = 0,
+                    dn = 0;
+                for (let i = 1; i < ys.length; i++) {
+                    if (ys[i] > ys[i - 1]) up++;
+                    else if (ys[i] < ys[i - 1]) dn++;
+                }
+                return Math.max(up, dn) / (ys.length - 1);
+            }
+
+            // (max − min) / |mean| — how much the series spans relative to its centre
+            function deltaRange(ys) {
+                const mn = Math.min(...ys),
+                    mx = Math.max(...ys);
+                const mean = ys.reduce((a, b) => a + b, 0) / ys.length;
+                return mean === 0 ? NaN : (mx - mn) / Math.abs(mean);
+            }
+
+            function computeStats(ys) {
+                return {
+                    mono: monotonicity(ys),
+                    rho: spearman(ys),
+                    r2: linearR2(ys),
+                    delta: deltaRange(ys),
+                };
+            }
+
+            // ── Trace building ────────────────────────────────────────────────────────────
+
+            const lvln = (s) => parseInt(s.replace("level_", ""), 10);
+
+            function buildTraces(metricKey) {
+                const traces = [];
+
+                for (const id of FEAT_MODELS) {
+                    if (!S.enabled.has(id)) continue;
+                    const records = CACHE[`${S.dataset}/${id}`];
+                    if (!records || !records.length) continue;
+
+                    const byPool = new Map();
+                    for (const rec of records) {
+                        if (!rec.metrics || !(metricKey in rec.metrics))
+                            continue;
+                        if (!byPool.has(rec.pooling))
+                            byPool.set(rec.pooling, new Map());
+                        byPool
+                            .get(rec.pooling)
+                            .set(lvln(rec.level), rec.metrics[metricKey]);
+                    }
+
+                    for (const [pool, lvlMap] of byPool) {
+                        if (FLAT_SET.has(id)) {
+                            if (pool !== "flat") continue;
+                        } else {
+                            if (!S.mpools.get(id)?.has(pool)) continue;
+                        }
+
+                        const levels = [...lvlMap.keys()]
+                            .filter((l) => l > 0)
+                            .sort((a, b) => a - b);
+                        const raw = levels.map((l) => lvlMap.get(l));
+                        const ys = applyNorm(raw, lvlMap);
+                        if (ys === null) continue;
+
+                        const color = MODEL_COLOR[id] || "#888";
+                        const solo = FLAT_SET.has(id);
+                        const name = solo ? id : `${id}·${pool}`;
+
+                        traces.push({
+                            x: levels,
+                            y: ys,
+                            mode: "lines+markers",
+                            name,
+                            legendgroup: id,
+                            showlegend: false,
+                            line: {
+                                color,
+                                dash: POOL_DASH[pool] || "solid",
+                                width: 1.7,
+                            },
+                            marker: {
+                                color,
+                                size: 4,
+                                symbol: POOL_SYMBOL[pool] || "circle",
+                            },
+                            hovertemplate: `<b>${id}</b>${solo ? "" : ` · ${pool}`}<br>level %{x}<br>${metricKey}: <b>%{y:.5g}</b><extra></extra>`,
+                        });
+                    }
+                }
+
+                // Both pixel metrics in every plot
+                const px = CACHE[`${S.dataset}/pixel`];
+                if (px && px.length) {
+                    for (const cfg of PIXEL_CFG) {
+                        if (!S[cfg.showKey]) continue;
+                        const lvlMap = new Map();
+                        for (const rec of px) {
+                            if (rec.metrics && rec.metrics[cfg.key] != null)
+                                lvlMap.set(
+                                    lvln(rec.level),
+                                    rec.metrics[cfg.key],
+                                );
+                        }
+                        const levels = [...lvlMap.keys()]
+                            .filter((l) => l > 0)
+                            .sort((a, b) => a - b);
+                        const raw = levels.map((l) => lvlMap.get(l));
+                        let ys = applyNorm(raw, lvlMap);
+                        if (ys !== null) {
+                            if (S[cfg.flipKey]) ys = invertYs(ys);
+                            traces.push({
+                                x: levels,
+                                y: ys,
+                                mode: "lines+markers",
+                                name: cfg.label,
+                                legendgroup: cfg.key,
+                                showlegend: false,
+                                line: {
+                                    color: cfg.color,
+                                    dash: cfg.dash,
+                                    width: 1.5,
+                                },
+                                marker: {
+                                    color: cfg.color,
+                                    size: 4,
+                                    symbol: cfg.sym,
+                                },
+                                hovertemplate: `<b>${cfg.label}</b>${S[cfg.flipKey] ? " (inv)" : ""}<br>level %{x}<br><b>%{y:.4g}</b><extra></extra>`,
+                            });
+                        }
+                    }
+                }
+
+                return traces;
+            }
+
+            // ── Plotly layout ─────────────────────────────────────────────────────────────
+
+            const BASE_FONT = {
+                family: "'Inter', system-ui, sans-serif",
+                size: 11,
+                color: "#52525b",
+            };
+            const TICK_FONT = {
+                family: "'JetBrains Mono', monospace",
+                size: 10,
+            };
+            const AXIS_BASE = {
+                gridcolor: "#eeeeef",
+                linecolor: "#d4d4d8",
+                tickcolor: "#d4d4d8",
+                zeroline: false,
+                mirror: false,
+            };
+
+            function makeLayout(yTitle) {
+                return {
+                    autosize: true,
+                    font: BASE_FONT,
+                    showlegend: false,
+                    xaxis: {
+                        title: { text: "Degradation Level", standoff: 8 },
+                        tickfont: TICK_FONT,
+                        tickvals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                        range: [0.5, 10.5],
+                        ...AXIS_BASE,
+                    },
+                    yaxis: {
+                        title: { text: yTitle, standoff: 6 },
+                        tickfont: TICK_FONT,
+                        type: S.yScale === "log" ? "log" : "linear",
+                        exponentformat: "e",
+                        ...AXIS_BASE,
+                    },
+                    plot_bgcolor: "#fff",
+                    paper_bgcolor: "#fff",
+                    margin: { t: 12, r: 16, b: 44, l: 60 },
+                    hovermode: "closest",
+                    hoverlabel: {
+                        bgcolor: "#fff",
+                        bordercolor: "#d4d4d8",
+                        font: BASE_FONT,
+                    },
+                };
+            }
+
+            function emptyLayout(yTitle) {
+                const ly = makeLayout(yTitle);
+                ly.annotations = [
+                    {
+                        text: "No data",
+                        showarrow: false,
+                        xref: "paper",
+                        yref: "paper",
+                        x: 0.5,
+                        y: 0.5,
+                        font: { size: 12, color: "#a1a1aa" },
+                    },
+                ];
+                return ly;
+            }
+
+            const PCFG = {
+                responsive: true,
+                displayModeBar: "hover",
+                modeBarButtonsToRemove: [
+                    "select2d",
+                    "lasso2d",
+                    "toggleSpikelines",
+                    "hoverCompareCartesian",
+                    "hoverClosestCartesian",
+                ],
+                displaylogo: false,
+            };
+
+            function yLabel(base) {
+                switch (S.norm) {
+                    case "ref":
+                        return `${base} / level ${S.refLevel}`;
+                    case "divmax":
+                        return `${base} (÷ max)`;
+                    case "minmax":
+                        return `${base} (min–max)`;
+                    case "zscore":
+                        return `${base} (z-score)`;
+                    default:
+                        return base;
+                }
+            }
+
+            // ── Right panel helpers ───────────────────────────────────────────────────────
+
+            function makeSwatch(color, dash, sym) {
+                const da = SVG_DASH[dash] || "";
+                const da_attr = da ? ` stroke-dasharray="${da}"` : "";
+                let mk = "";
+                switch (sym) {
+                    case "circle":
+                        mk = `<circle cx="14" cy="6" r="2.5" fill="${color}"/>`;
+                        break;
+                    case "diamond":
+                        mk = `<polygon points="14,3 17,6 14,9 11,6" fill="${color}"/>`;
+                        break;
+                    case "square":
+                        mk = `<rect x="11.5" y="3.5" width="5" height="5" fill="${color}"/>`;
+                        break;
+                    case "triangle-up":
+                        mk = `<polygon points="14,3.5 17.5,8.5 10.5,8.5" fill="${color}"/>`;
+                        break;
+                    case "circle-open":
+                        mk = `<circle cx="14" cy="6" r="2.5" fill="none" stroke="${color}" stroke-width="1.5"/>`;
+                        break;
+                    case "diamond-open":
+                        mk = `<polygon points="14,3 17,6 14,9 11,6" fill="none" stroke="${color}" stroke-width="1.5"/>`;
+                        break;
+                    default:
+                        mk = `<circle cx="14" cy="6" r="2.5" fill="${color}"/>`;
+                        break;
+                }
+                return (
+                    `<svg width="28" height="12" style="flex-shrink:0;display:block">` +
+                    `<line x1="1" y1="6" x2="27" y2="6" stroke="${color}" stroke-width="1.8"${da_attr}/>${mk}</svg>`
+                );
+            }
+
+            function getActiveSeries() {
+                const out = [];
+                for (const id of FEAT_MODELS) {
+                    if (!S.enabled.has(id)) continue;
+                    if (FLAT_SET.has(id)) {
+                        out.push({
+                            name: id,
+                            color: MODEL_COLOR[id] || "#888",
+                            dash: "solid",
+                            sym: "circle",
+                            id,
+                            pool: "flat",
+                        });
+                    } else {
+                        for (const pool of POOLINGS) {
+                            if (!S.mpools.get(id)?.has(pool)) continue;
+                            out.push({
+                                name: `${id}·${pool}`,
+                                color: MODEL_COLOR[id] || "#888",
+                                dash: POOL_DASH[pool] || "solid",
+                                sym: POOL_SYMBOL[pool] || "circle",
+                                id,
+                                pool,
+                            });
+                        }
+                    }
+                }
+                for (const cfg of PIXEL_CFG) {
+                    if (!S[cfg.showKey]) continue;
+                    out.push({
+                        name: cfg.label,
+                        color: cfg.color,
+                        dash: cfg.dash,
+                        sym: cfg.sym,
+                        id: cfg.key,
+                        pool: cfg.key,
+                        pixelKey: cfg.key,
+                    });
+                }
+                return out;
+            }
+
+            function getRawYs(id, pool, metricKey) {
+                // For pixel metrics use their own key regardless of metricKey
+                if (id === "psnr" || id === "ssim") {
+                    const px = CACHE[`${S.dataset}/pixel`];
+                    if (!px) return null;
+                    const m = new Map();
+                    for (const rec of px)
+                        if (rec.metrics && rec.metrics[id] != null)
+                            m.set(lvln(rec.level), rec.metrics[id]);
+                    const ls = [...m.keys()]
+                        .filter((l) => l > 0)
+                        .sort((a, b) => a - b);
+                    return ls.length ? ls.map((l) => m.get(l)) : null;
+                }
+                const records = CACHE[`${S.dataset}/${id}`];
+                if (!records) return null;
+                const m = new Map();
+                for (const rec of records) {
+                    if (rec.pooling !== pool) continue;
+                    if (!rec.metrics || !(metricKey in rec.metrics)) continue;
+                    m.set(lvln(rec.level), rec.metrics[metricKey]);
+                }
+                const ls = [...m.keys()]
+                    .filter((l) => l > 0)
+                    .sort((a, b) => a - b);
+                return ls.length ? ls.map((l) => m.get(l)) : null;
+            }
+
+            function statCls(v, hi, lo) {
+                if (isNaN(v)) return "";
+                return v >= hi ? "sg" : v >= lo ? "sy" : "sr";
+            }
+
+            function buildStatsTable(series, metricKey) {
+                if (!series.length)
+                    return '<span class="no-data">no active series</span>';
+                const rows = series
+                    .map((s) => {
+                        const mk = s.pixelKey || metricKey;
+                        const ys = getRawYs(s.id, s.pool, mk);
+                        if (!ys) return "";
+                        const st = computeStats(ys);
+                        const f2 = (v) => (isNaN(v) ? "—" : v.toFixed(2));
+                        const f1 = (v) => (isNaN(v) ? "—" : v.toFixed(1));
+                        return (
+                            `<tr>` +
+                            `<td title="${s.name}"><span class="spip" style="background:${s.color}"></span>${s.name}</td>` +
+                            `<td class="${statCls(st.mono, 0.8, 0.6)}">${f2(st.mono)}</td>` +
+                            `<td class="${statCls(st.rho, 0.9, 0.7)}">${f2(st.rho)}</td>` +
+                            `<td class="${statCls(st.r2, 0.9, 0.7)}">${f2(st.r2)}</td>` +
+                            `<td>${f1(st.delta)}</td>` +
+                            `</tr>`
+                        );
+                    })
+                    .join("");
+                if (!rows) return '<span class="no-data">no data loaded</span>';
+                return (
+                    `<table class="stbl">` +
+                    `<thead><tr>` +
+                    `<th>series</th>` +
+                    `<th title="Monotonicity — fraction of consecutive steps in dominant direction (1 = perfectly monotone, direction-agnostic)">mono</th>` +
+                    `<th title="Absolute Spearman rank correlation with level (1 = perfectly monotone, direction-agnostic)">|ρ|</th>` +
+                    `<th title="R² of linear fit to levels 1–10 (1 = perfectly linear)">R²</th>` +
+                    `<th title="(max − min) / |mean| — relative range across levels">Δ</th>` +
+                    `</tr></thead><tbody>${rows}</tbody></table>`
+                );
+            }
+
+            function buildRightPanel() {
+                const series = getActiveSeries();
+
+                // Legend
+                document.getElementById("cust-legend").innerHTML = series.length
+                    ? series
+                          .map(
+                              (s) =>
+                                  `<div class="leg-item">${makeSwatch(s.color, s.dash, s.sym)}` +
+                                  `<span class="leg-nm" title="${s.name}">${s.name}</span></div>`,
+                          )
+                          .join("")
+                    : '<span class="no-data">no active series</span>';
+
+                // Stats sections — only show when corresponding plot is on
+                const fdSec = document.getElementById("stats-fd-sec");
+                fdSec.style.display = S.showFd ? "" : "none";
+                if (S.showFd)
+                    document.getElementById("stats-fd").innerHTML =
+                        buildStatsTable(series, "fd");
+
+                const edSec = document.getElementById("stats-ed-sec");
+                edSec.style.display = S.showEd ? "" : "none";
+                if (S.showEd)
+                    document.getElementById("stats-ed").innerHTML =
+                        buildStatsTable(series, "ed");
+            }
+
+            // ── Render ────────────────────────────────────────────────────────────────────
+
+            function render() {
+                document.getElementById("fd-card").style.display = S.showFd
+                    ? ""
+                    : "none";
+                document.getElementById("ed-card").style.display = S.showEd
+                    ? ""
+                    : "none";
+
+                if (S.showFd) {
+                    const t = buildTraces("fd");
+                    Plotly.react(
+                        "plot-fd",
+                        t,
+                        t.length
+                            ? makeLayout(yLabel("FD"))
+                            : emptyLayout(yLabel("FD")),
+                        PCFG,
+                    );
+                }
+                if (S.showEd) {
+                    const t = buildTraces("ed");
+                    Plotly.react(
+                        "plot-ed",
+                        t,
+                        t.length
+                            ? makeLayout(yLabel("ED"))
+                            : emptyLayout(yLabel("ED")),
+                        PCFG,
+                    );
+                }
+
+                const nd = {
+                    none: "",
+                    ref: ` — ÷ level ${S.refLevel}`,
+                    divmax: " — ÷ max",
+                    minmax: " — min–max",
+                    zscore: " — z-score",
+                }[S.norm];
+                document.getElementById("fd-desc").textContent =
+                    `Fréchet Distance${nd}`;
+                document.getElementById("ed-desc").textContent =
+                    `Euclidean Distance${nd}`;
+
+                buildRightPanel();
+            }
+
+            window.addEventListener("resize", () => {
+                if (S.showFd) Plotly.Plots.resize("plot-fd");
+                if (S.showEd) Plotly.Plots.resize("plot-ed");
+            });
+
+            // ── Model list UI ─────────────────────────────────────────────────────────────
+
+            function savePoolState(id) {
+                lsSet(
+                    `mfid_pool_${id}`,
+                    [...(S.mpools.get(id) || [])].join(","),
+                );
+            }
+
+            function setPoolRow(id, on) {
+                const row = document.getElementById(`pool-${id}`);
+                if (!row) return;
+                if (on) {
+                    row.classList.add("active");
+                    for (const p of POOLINGS) {
+                        const cb = document.getElementById(`pcb-${id}-${p}`);
+                        if (cb) cb.checked = S.mpools.get(id)?.has(p) ?? false;
+                    }
+                } else {
+                    row.classList.remove("active");
+                    row.querySelectorAll("input").forEach((cb) => {
+                        cb.checked = false;
+                    });
+                }
+            }
+
+            function buildModelList() {
+                const container = document.getElementById("model-list");
+                container.innerHTML = "";
+
+                for (const id of FEAT_MODELS) {
+                    const entry = document.createElement("div");
+
+                    const mrow = document.createElement("label");
+                    mrow.className = "mrow";
+
+                    const cb = document.createElement("input");
+                    cb.type = "checkbox";
+                    cb.id = `cb-${id}`;
+                    cb.checked = S.enabled.has(id);
+                    cb.addEventListener("change", (e) => {
+                        if (e.target.checked) {
+                            S.enabled.add(id);
+                            if (SEQ_SET.has(id)) setPoolRow(id, true);
+                        } else {
+                            S.enabled.delete(id);
+                            if (SEQ_SET.has(id)) setPoolRow(id, false);
+                        }
+                        render();
+                    });
+
+                    const pip = document.createElement("span");
+                    pip.className = "pip";
+                    pip.style.background = MODEL_COLOR[id] || "#999";
+
+                    const nm = document.createElement("span");
+                    nm.className = "mname";
+                    nm.textContent = id;
+
+                    mrow.append(cb, pip, nm);
+                    entry.appendChild(mrow);
+
+                    if (SEQ_SET.has(id)) {
+                        const poolRow = document.createElement("div");
+                        poolRow.className =
+                            "pool-row" + (S.enabled.has(id) ? " active" : "");
+                        poolRow.id = `pool-${id}`;
+
+                        for (const pool of POOLINGS) {
+                            const tog = document.createElement("label");
+                            tog.className = "ptog";
+                            const pcb = document.createElement("input");
+                            pcb.type = "checkbox";
+                            pcb.id = `pcb-${id}-${pool}`;
+                            pcb.checked = S.mpools.get(id)?.has(pool) ?? false;
+                            pcb.addEventListener("change", (e) => {
+                                const set = S.mpools.get(id);
+                                e.target.checked
+                                    ? set.add(pool)
+                                    : set.delete(pool);
+                                savePoolState(id);
+                                render();
+                            });
+                            const sp = document.createElement("span");
+                            sp.textContent = pool;
+                            tog.append(pcb, sp);
+                            poolRow.appendChild(tog);
+                        }
+                        entry.appendChild(poolRow);
+                    }
+
+                    container.appendChild(entry);
+                }
+
+                const hr = document.createElement("hr");
+                hr.className = "px-divider";
+                container.appendChild(hr);
+
+                for (const { key, label, showKey, flipKey, color } of [
+                    {
+                        key: "psnr",
+                        label: "PSNR (dB)",
+                        showKey: "showPsnr",
+                        flipKey: "flipPsnr",
+                        color: "#f59e0b",
+                    },
+                    {
+                        key: "ssim",
+                        label: "SSIM",
+                        showKey: "showSsim",
+                        flipKey: "flipSsim",
+                        color: "#8b5cf6",
+                    },
+                ]) {
+                    const row = document.createElement("div");
+                    row.className = "px-row";
+
+                    const cb = document.createElement("input");
+                    cb.type = "checkbox";
+                    cb.checked = S[showKey];
+                    cb.addEventListener("change", (e) => {
+                        S[showKey] = e.target.checked;
+                        render();
+                    });
+
+                    const pip = document.createElement("span");
+                    pip.className = "pip";
+                    pip.style.background = color;
+
+                    const nm = document.createElement("span");
+                    nm.className = "mname";
+                    nm.textContent = label;
+                    nm.style.cursor = "pointer";
+                    nm.addEventListener("click", () => {
+                        cb.checked = !cb.checked;
+                        S[showKey] = cb.checked;
+                        render();
+                    });
+
+                    const invertBtn = document.createElement("button");
+                    invertBtn.className =
+                        "invert-btn" + (S[flipKey] ? " active" : "");
+                    invertBtn.textContent = "invert";
+                    invertBtn.title =
+                        "Invert direction — PSNR/SSIM decrease with degradation; inverting makes them trend up like FD/ED";
+                    invertBtn.addEventListener("click", () => {
+                        S[flipKey] = !S[flipKey];
+                        invertBtn.classList.toggle("active", S[flipKey]);
+                        render();
+                    });
+
+                    row.append(cb, pip, nm, invertBtn);
+                    container.appendChild(row);
+                }
+            }
+
+            // ── Event wiring ──────────────────────────────────────────────────────────────
+
+            function updateNormHint() {
+                document.getElementById("norm-hint").textContent =
+                    NORM_HINTS[S.norm] || "";
+                document
+                    .getElementById("ref-level-row")
+                    .classList.toggle("visible", S.norm === "ref");
+            }
+
+            function wire() {
+                document
+                    .getElementById("sel-ds")
+                    .addEventListener("change", async (e) => {
+                        S.dataset = e.target.value;
+                        await loadAll(S.dataset);
+                        checkData();
+                        render();
+                    });
+
+                document.querySelectorAll('input[name="ys"]').forEach((r) =>
+                    r.addEventListener("change", (e) => {
+                        S.yScale = e.target.value;
+                        render();
+                    }),
+                );
+
+                document
+                    .getElementById("sel-norm")
+                    .addEventListener("change", (e) => {
+                        S.norm = e.target.value;
+                        updateNormHint();
+                        render();
+                    });
+
+                document
+                    .getElementById("sel-ref")
+                    .addEventListener("change", (e) => {
+                        S.refLevel = parseInt(e.target.value, 10);
+                        render();
+                    });
+
+                document
+                    .getElementById("cb-show-fd")
+                    .addEventListener("change", (e) => {
+                        S.showFd = e.target.checked;
+                        render();
+                        if (S.showFd)
+                            setTimeout(() => Plotly.Plots.resize("plot-fd"), 0);
+                    });
+
+                document
+                    .getElementById("cb-show-ed")
+                    .addEventListener("change", (e) => {
+                        S.showEd = e.target.checked;
+                        render();
+                        if (S.showEd)
+                            setTimeout(() => Plotly.Plots.resize("plot-ed"), 0);
+                    });
+            }
+
+            // ── Banner / data check ───────────────────────────────────────────────────────
+
+            function setBanner(msg) {
+                const el = document.getElementById("banner");
+                if (msg) {
+                    el.innerHTML = msg;
+                    el.style.display = "";
+                } else {
+                    el.style.display = "none";
+                }
+            }
+
+            function checkData() {
+                const ok = FEAT_MODELS.some(
+                    (id) => !!CACHE[`${S.dataset}/${id}`],
+                );
+                if (!ok) {
+                    setBanner(
+                        window.location.protocol === "file:"
+                            ? "Running via <code>file://</code> — serve with: <code>python3 -m http.server 8000</code>"
+                            : `Could not load data from <code>${DATA_BASE}/${S.dataset}/</code>.`,
+                    );
+                } else {
+                    setBanner(null);
+                }
+            }
+
+            // ── Init ──────────────────────────────────────────────────────────────────────
+
+            async function init() {
+                if (window.location.protocol === "file:")
+                    setBanner(
+                        "Running via <code>file://</code> — serve with: <code>python3 -m http.server 8000</code>",
+                    );
+
+                buildModelList();
+                wire();
+                updateNormHint();
+                await loadAll(S.dataset);
+                checkData();
+                render();
+            }
+
+            init();
+        </script>
+    </body>
+</html>

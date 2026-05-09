@@ -1,0 +1,442 @@
+[
+  {
+    "level": "level_1",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.008467411600622476,
+      "ed": 0.06266626947358818,
+      "fd_inf": 0.007757087626861725,
+      "ed_inf": 0.06200637127796701
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 0.045098102500507053,
+      "ed": 0.14684561358954276,
+      "fd_inf": 0.03495475829862278,
+      "ed_inf": 0.14175272808640677
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.0033789064287854664,
+      "ed": 0.04964481030214692,
+      "fd_inf": 0.0032546888836519857,
+      "ed_inf": 0.0489100985939887
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 0.1351778465468101,
+      "ed": 0.21441252008153291,
+      "fd_inf": 0.11407041851655578,
+      "ed_inf": 0.21056174440377892
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.046180963747042725,
+      "ed": 0.14703304608146012,
+      "fd_inf": 0.04330066384798121,
+      "ed_inf": 0.14467836668900474
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 0.24996400395432516,
+      "ed": 0.3695269924286419,
+      "fd_inf": 0.21870942668213564,
+      "ed_inf": 0.36005027651967964
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.018669393247845,
+      "ed": 0.11650322117061648,
+      "fd_inf": 0.018047844889505452,
+      "ed_inf": 0.11465853125264819
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 0.7142737227979552,
+      "ed": 0.5060074999866802,
+      "fd_inf": 0.6430508147409256,
+      "ed_inf": 0.49599396538666196
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.1191821334299421,
+      "ed": 0.23450371058199157,
+      "fd_inf": 0.1136432150069745,
+      "ed_inf": 0.23099444979905726
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 0.671534905303016,
+      "ed": 0.6249115580946276,
+      "fd_inf": 0.6112162565774127,
+      "ed_inf": 0.609183687220598
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.04608183537158328,
+      "ed": 0.18271480568908444,
+      "fd_inf": 0.044369025655965934,
+      "ed_inf": 0.17974181214860113
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 1.8134302340394157,
+      "ed": 0.8089807612738428,
+      "fd_inf": 1.6782759487753873,
+      "ed_inf": 0.7943136428278785
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.2842297753743983,
+      "ed": 0.36033657673203745,
+      "fd_inf": 0.27289687511259,
+      "ed_inf": 0.35627745049293774
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 1.6234707548714056,
+      "ed": 0.9827371401796425,
+      "fd_inf": 1.525111200932908,
+      "ed_inf": 0.9635325723493836
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.10436661465301666,
+      "ed": 0.27167573896266,
+      "fd_inf": 0.10002091068178054,
+      "ed_inf": 0.2663614633540148
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 4.263782922798683,
+      "ed": 1.2387319906247531,
+      "fd_inf": 4.012258049201167,
+      "ed_inf": 1.2188994647810023
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.6036958260449037,
+      "ed": 0.5308078184645717,
+      "fd_inf": 0.5858508025389989,
+      "ed_inf": 0.5267176826245332
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 3.4203885663448794,
+      "ed": 1.4582077938854336,
+      "fd_inf": 3.2785693765029746,
+      "ed_inf": 1.4352317905877106
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.2286111657662604,
+      "ed": 0.39423731310549176,
+      "fd_inf": 0.2210057739810318,
+      "ed_inf": 0.388698718469461
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 8.797841606282688,
+      "ed": 1.8029277972915012,
+      "fd_inf": 8.449754171654707,
+      "ed_inf": 1.782374935920889
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.5418200666057902,
+      "ed": 0.8810679937581879,
+      "fd_inf": 1.5140129844817187,
+      "ed_inf": 0.8757620600225673
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 8.981165281981335,
+      "ed": 2.3907892664274804,
+      "fd_inf": 8.67487567907646,
+      "ed_inf": 2.350496768779499
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.6349499937984726,
+      "ed": 0.6294406331238459,
+      "fd_inf": 0.6146794619139088,
+      "ed_inf": 0.6204435590532728
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 22.058130272094047,
+      "ed": 2.96958448878637,
+      "fd_inf": 21.467326297509292,
+      "ed_inf": 2.9390360490364325
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.126046514772111,
+      "ed": 1.064771839806341,
+      "fd_inf": 2.0787265969121265,
+      "ed_inf": 1.053846966561989
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 12.025817663622153,
+      "ed": 2.7625555162738813,
+      "fd_inf": 11.64820444097845,
+      "ed_inf": 2.7198466461064075
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.9489524322696765,
+      "ed": 0.7750740908036708,
+      "fd_inf": 0.918924466987751,
+      "ed_inf": 0.7621831852805897
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 30.532929832527465,
+      "ed": 3.5959705307266807,
+      "fd_inf": 29.676245341377516,
+      "ed_inf": 3.5471194602319542
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 3.3220448237352023,
+      "ed": 1.433665920091271,
+      "fd_inf": 3.2596757211164804,
+      "ed_inf": 1.4167866539145864
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 16.21849590737356,
+      "ed": 3.1847060114236467,
+      "fd_inf": 15.864111320360452,
+      "ed_inf": 3.1477589929590772
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 1.6356728468475348,
+      "ed": 1.0892398819913922,
+      "fd_inf": 1.5959449755637225,
+      "ed_inf": 1.0728295994369685
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 46.55852988337346,
+      "ed": 4.795344927486225,
+      "fd_inf": 45.60039921192285,
+      "ed_inf": 4.731326054648773
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 5.100026749308473,
+      "ed": 1.8964396828226362,
+      "fd_inf": 4.99887453754321,
+      "ed_inf": 1.8728833335092858
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 19.90325391060459,
+      "ed": 3.5245458883965655,
+      "fd_inf": 19.57255718560466,
+      "ed_inf": 3.490887338253543
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 2.8177247360213102,
+      "ed": 1.5441824052217838,
+      "fd_inf": 2.7458797839025926,
+      "ed_inf": 1.5208276885160938
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 67.54999834597217,
+      "ed": 6.282476209591375,
+      "fd_inf": 66.24994179598323,
+      "ed_inf": 6.1989187226536595
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 7.65535831252111,
+      "ed": 2.3799126902099355,
+      "fd_inf": 7.6069931276268505,
+      "ed_inf": 2.3720385290065558
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "max",
+    "metrics": {
+      "fd": 23.503365640697496,
+      "ed": 3.8274684715693343,
+      "fd_inf": 23.279296603093176,
+      "ed_inf": 3.804789560796239
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 4.560282780064751,
+      "ed": 1.9951387860336973,
+      "fd_inf": 4.5188852627372045,
+      "ed_inf": 1.986668670489989
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-iam-sensitive",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 95.63386878300216,
+      "ed": 7.82290285952481,
+      "fd_inf": 94.9177855234259,
+      "ed_inf": 7.788835660514096
+    }
+  }
+]

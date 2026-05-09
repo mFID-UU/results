@@ -1,0 +1,112 @@
+[
+  {
+    "level": "level_1",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 182.57370694710448,
+      "ed": 11.477177320971096,
+      "fd_inf": 181.4544284231844,
+      "ed_inf": 11.425653614998351
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 200.30443027611705,
+      "ed": 11.934055157544485,
+      "fd_inf": 199.3702437914366,
+      "ed_inf": 11.895651389748867
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 212.83198398746893,
+      "ed": 12.198886382110576,
+      "fd_inf": 211.89484127747863,
+      "ed_inf": 12.168705650706531
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 227.2326902360112,
+      "ed": 12.559628840726278,
+      "fd_inf": 226.03778961252232,
+      "ed_inf": 12.529042040204361
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 251.263050864718,
+      "ed": 13.224234241990233,
+      "fd_inf": 249.77697929328008,
+      "ed_inf": 13.187562970936574
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 289.30795035507776,
+      "ed": 14.329056533352857,
+      "fd_inf": 287.33420051189375,
+      "ed_inf": 14.280927430921782
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 341.0649687543095,
+      "ed": 15.799434164415917,
+      "fd_inf": 339.0697595625743,
+      "ed_inf": 15.750715859779499
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 412.0006720628806,
+      "ed": 17.73913121536148,
+      "fd_inf": 410.25564558393165,
+      "ed_inf": 17.696803038350332
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 476.27122122733823,
+      "ed": 19.512328866737242,
+      "fd_inf": 474.9242193050427,
+      "ed_inf": 19.477771501884952
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "inceptionv3",
+    "pooling": "flat",
+    "metrics": {
+      "fd": 522.8654939485111,
+      "ed": 20.855873463277252,
+      "fd_inf": 522.068484953048,
+      "ed_inf": 20.828456657626155
+    }
+  }
+]
