@@ -230,6 +230,11 @@
                 display: flex;
                 gap: 18px;
             }
+            .plot-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4px 0;
+            }
             .rit {
                 display: flex;
                 align-items: center;
@@ -529,21 +534,11 @@
 
                 <div class="sb-sec">
                     <div class="sb-lbl">Plots</div>
-                    <div class="radio-row">
-                        <label class="rit"
-                            ><input
-                                type="checkbox"
-                                id="cb-show-fd"
-                                checked
-                            /><span>FD</span></label
-                        >
-                        <label class="rit"
-                            ><input
-                                type="checkbox"
-                                id="cb-show-ed"
-                                checked
-                            /><span>ED</span></label
-                        >
+                    <div class="plot-grid">
+                        <label class="rit"><input type="checkbox" id="cb-show-fd" checked /><span>FD</span></label>
+                        <label class="rit"><input type="checkbox" id="cb-show-fdinf" /><span>FD∞</span></label>
+                        <label class="rit"><input type="checkbox" id="cb-show-ed" checked /><span>ED</span></label>
+                        <label class="rit"><input type="checkbox" id="cb-show-edinf" /><span>ED∞</span></label>
                     </div>
                 </div>
 
@@ -637,9 +632,17 @@
                     <div class="sb-lbl">FD — series stats</div>
                     <div class="stbl-wrap"><div id="stats-fd"></div></div>
                 </div>
+                <div class="sb-sec" id="stats-fdinf-sec">
+                    <div class="sb-lbl">FD∞ — series stats</div>
+                    <div class="stbl-wrap"><div id="stats-fdinf"></div></div>
+                </div>
                 <div class="sb-sec" id="stats-ed-sec">
                     <div class="sb-lbl">ED — series stats</div>
                     <div class="stbl-wrap"><div id="stats-ed"></div></div>
+                </div>
+                <div class="sb-sec" id="stats-edinf-sec">
+                    <div class="sb-lbl">ED∞ — series stats</div>
+                    <div class="stbl-wrap"><div id="stats-edinf"></div></div>
                 </div>
             </aside>
         </div>
@@ -786,7 +789,9 @@
                 norm: "none",
                 refLevel: 1,
                 showFd: true,
+                showFdInf: false,
                 showEd: true,
+                showEdInf: false,
             };
 
             // ── Cache ─────────────────────────────────────────────────────────────────────
@@ -941,7 +946,7 @@
 
             const lvln = (s) => parseInt(s.replace("level_", ""), 10);
 
-            function buildTraces(metricKey) {
+            function buildTraces(metricKey, opacity = 1) {
                 const traces = [];
 
                 for (const id of FEAT_MODELS) {
@@ -985,6 +990,7 @@
                             name,
                             legendgroup: id,
                             showlegend: false,
+                            opacity,
                             line: {
                                 color,
                                 dash: POOL_DASH[pool] || "solid",
@@ -1000,7 +1006,8 @@
                     }
                 }
 
-                // Both pixel metrics in every plot
+                // Pixel overlays — only for base metrics, not inf variants
+                if (opacity < 1) return traces;
                 const px = CACHE[`${S.dataset}/pixel`];
                 if (px && px.length) {
                     for (const cfg of PIXEL_CFG) {
@@ -1306,25 +1313,39 @@
                     document.getElementById("stats-fd").innerHTML =
                         buildStatsTable(series, "fd");
 
+                const fdInfSec = document.getElementById("stats-fdinf-sec");
+                fdInfSec.style.display = S.showFdInf ? "" : "none";
+                if (S.showFdInf)
+                    document.getElementById("stats-fdinf").innerHTML =
+                        buildStatsTable(series, "fd_inf");
+
                 const edSec = document.getElementById("stats-ed-sec");
                 edSec.style.display = S.showEd ? "" : "none";
                 if (S.showEd)
                     document.getElementById("stats-ed").innerHTML =
                         buildStatsTable(series, "ed");
+
+                const edInfSec = document.getElementById("stats-edinf-sec");
+                edInfSec.style.display = S.showEdInf ? "" : "none";
+                if (S.showEdInf)
+                    document.getElementById("stats-edinf").innerHTML =
+                        buildStatsTable(series, "ed_inf");
             }
 
             // ── Render ────────────────────────────────────────────────────────────────────
 
             function render() {
-                document.getElementById("fd-card").style.display = S.showFd
+                document.getElementById("fd-card").style.display = (S.showFd || S.showFdInf)
                     ? ""
                     : "none";
-                document.getElementById("ed-card").style.display = S.showEd
+                document.getElementById("ed-card").style.display = (S.showEd || S.showEdInf)
                     ? ""
                     : "none";
 
-                if (S.showFd) {
-                    const t = buildTraces("fd");
+                if (S.showFd || S.showFdInf) {
+                    const t = [];
+                    if (S.showFd)    t.push(...buildTraces("fd"));
+                    if (S.showFdInf) t.push(...buildTraces("fd_inf", 0.45));
                     Plotly.react(
                         "plot-fd",
                         t,
@@ -1334,8 +1355,10 @@
                         PCFG,
                     );
                 }
-                if (S.showEd) {
-                    const t = buildTraces("ed");
+                if (S.showEd || S.showEdInf) {
+                    const t = [];
+                    if (S.showEd)    t.push(...buildTraces("ed"));
+                    if (S.showEdInf) t.push(...buildTraces("ed_inf", 0.45));
                     Plotly.react(
                         "plot-ed",
                         t,
@@ -1362,8 +1385,8 @@
             }
 
             window.addEventListener("resize", () => {
-                if (S.showFd) Plotly.Plots.resize("plot-fd");
-                if (S.showEd) Plotly.Plots.resize("plot-ed");
+                if (S.showFd || S.showFdInf) Plotly.Plots.resize("plot-fd");
+                if (S.showEd || S.showEdInf) Plotly.Plots.resize("plot-ed");
             });
 
             // ── Model list UI ─────────────────────────────────────────────────────────────
@@ -1574,12 +1597,26 @@
                     });
 
                 document
+                    .getElementById("cb-show-fdinf")
+                    .addEventListener("change", (e) => {
+                        S.showFdInf = e.target.checked;
+                        render();
+                    });
+
+                document
                     .getElementById("cb-show-ed")
                     .addEventListener("change", (e) => {
                         S.showEd = e.target.checked;
                         render();
                         if (S.showEd)
                             setTimeout(() => Plotly.Plots.resize("plot-ed"), 0);
+                    });
+
+                document
+                    .getElementById("cb-show-edinf")
+                    .addEventListener("change", (e) => {
+                        S.showEdInf = e.target.checked;
+                        render();
                     });
             }
 
