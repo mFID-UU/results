@@ -977,10 +977,13 @@
                             if (!S.mpools.get(id)?.has(pool)) continue;
                         }
 
+                        const useL0 = S.showL0 && S.yScale !== "log";
                         const levels = [...lvlMap.keys()]
                             .filter((l) => l > 0)
                             .sort((a, b) => a - b);
-                        const raw = levels.map((l) => lvlMap.get(l));
+                        const rawVals = levels.map((l) => lvlMap.get(l));
+                        const raw = useL0 ? [0, ...rawVals] : rawVals;
+                        const plotLevels = useL0 ? [0, ...levels] : levels;
                         const ys = applyNorm(raw, lvlMap);
                         if (ys === null) continue;
 
@@ -988,10 +991,9 @@
                         const solo = FLAT_SET.has(id);
                         const name = solo ? id : `${id}·${pool}`;
 
-                        const useL0 = S.showL0 && S.yScale !== "log";
                         traces.push({
-                            x: useL0 ? [0, ...levels] : levels,
-                            y: useL0 ? [0, ...ys]     : ys,
+                            x: plotLevels,
+                            y: ys,
                             mode: "lines+markers",
                             name,
                             legendgroup: id,
@@ -1260,7 +1262,9 @@
                 const ls = [...m.keys()]
                     .filter((l) => l > 0)
                     .sort((a, b) => a - b);
-                return ls.length ? ls.map((l) => m.get(l)) : null;
+                if (!ls.length) return null;
+                const vals = ls.map((l) => m.get(l));
+                return S.showL0 ? [0, ...vals] : vals;
             }
 
             function statCls(v, hi, lo) {
