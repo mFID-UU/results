@@ -24,17 +24,6 @@
   {
     "level": "level_1",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.0010392480622840594,
-      "ed": 0.018380399471253264,
-      "fd_inf": 0.0008659372314336477,
-      "ed_inf": 0.018176872827560385
-    }
-  },
-  {
-    "level": "level_1",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 0.11162590431629837,
@@ -63,17 +52,6 @@
       "ed": 0.1444931813476129,
       "fd_inf": 0.04860262690060353,
       "ed_inf": 0.14249612833239644
-    }
-  },
-  {
-    "level": "level_2",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.0030288424121387436,
-      "ed": 0.03095821265928828,
-      "fd_inf": 0.002649926264735108,
-      "ed_inf": 0.030512975653541014
     }
   },
   {
@@ -112,17 +90,6 @@
   {
     "level": "level_3",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.00546567463012515,
-      "ed": 0.04450890465812421,
-      "fd_inf": 0.004927584234619637,
-      "ed_inf": 0.04414866729879201
-    }
-  },
-  {
-    "level": "level_3",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 0.5039603249507962,
@@ -151,17 +118,6 @@
       "ed": 0.2227070664565894,
       "fd_inf": 0.11866309794592043,
       "ed_inf": 0.21966372687735022
-    }
-  },
-  {
-    "level": "level_4",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.008218177112812253,
-      "ed": 0.05472140426711194,
-      "fd_inf": 0.007556139036671721,
-      "ed_inf": 0.054289295826214556
     }
   },
   {
@@ -200,17 +156,6 @@
   {
     "level": "level_5",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.010968439916714257,
-      "ed": 0.05808723627360786,
-      "fd_inf": 0.009768898145074967,
-      "ed_inf": 0.05745462703255799
-    }
-  },
-  {
-    "level": "level_5",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 1.2643744855814418,
@@ -239,17 +184,6 @@
       "ed": 0.4210131318190207,
       "fd_inf": 0.38692616766110716,
       "ed_inf": 0.4213989059266014
-    }
-  },
-  {
-    "level": "level_6",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.01605480805097459,
-      "ed": 0.06525477756390116,
-      "fd_inf": 0.01462462809674802,
-      "ed_inf": 0.06419539349817494
     }
   },
   {
@@ -288,17 +222,6 @@
   {
     "level": "level_7",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.020737986838323952,
-      "ed": 0.07289005597065638,
-      "fd_inf": 0.018769661526052323,
-      "ed_inf": 0.07168853818472129
-    }
-  },
-  {
-    "level": "level_7",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 2.633084167178282,
@@ -327,17 +250,6 @@
       "ed": 0.7466079430404549,
       "fd_inf": 0.9869454461236776,
       "ed_inf": 0.7481051952932235
-    }
-  },
-  {
-    "level": "level_8",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.028006983667605123,
-      "ed": 0.08358923177005893,
-      "fd_inf": 0.025716732942521605,
-      "ed_inf": 0.08232505196338216
     }
   },
   {
@@ -376,17 +288,6 @@
   {
     "level": "level_9",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.0444719375004774,
-      "ed": 0.09847045870712733,
-      "fd_inf": 0.04189932535310424,
-      "ed_inf": 0.09705955774313356
-    }
-  },
-  {
-    "level": "level_9",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 5.53137947902313,
@@ -415,17 +316,6 @@
       "ed": 1.3766703280084198,
       "fd_inf": 2.9606955217228017,
       "ed_inf": 1.3712756955999352
-    }
-  },
-  {
-    "level": "level_10",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.07930127716646318,
-      "ed": 0.1318049534835604,
-      "fd_inf": 0.07657806775780425,
-      "ed_inf": 0.1307599656991348
     }
   },
   {

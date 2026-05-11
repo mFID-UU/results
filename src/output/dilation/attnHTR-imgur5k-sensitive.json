@@ -24,17 +24,6 @@
   {
     "level": "level_1",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.001985364856306404,
-      "ed": 0.02647718554969927,
-      "fd_inf": 0.0017620122854014736,
-      "ed_inf": 0.026002461806323762
-    }
-  },
-  {
-    "level": "level_1",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 0.12577430093296016,
@@ -63,17 +52,6 @@
       "ed": 0.3506104435133932,
       "fd_inf": 0.19107699845954185,
       "ed_inf": 0.3396699113150185
-    }
-  },
-  {
-    "level": "level_2",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.012311255678864264,
-      "ed": 0.06629403956934467,
-      "fd_inf": 0.01136169722305242,
-      "ed_inf": 0.06512080151389082
     }
   },
   {
@@ -112,17 +90,6 @@
   {
     "level": "level_3",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.028536051419441044,
-      "ed": 0.10248561174940017,
-      "fd_inf": 0.026551138123784818,
-      "ed_inf": 0.10007037658474915
-    }
-  },
-  {
-    "level": "level_3",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 1.882327367719384,
@@ -151,17 +118,6 @@
       "ed": 1.0025818226471803,
       "fd_inf": 1.4385173846624975,
       "ed_inf": 0.9705790462604612
-    }
-  },
-  {
-    "level": "level_4",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.06918459772033358,
-      "ed": 0.1614687731961666,
-      "fd_inf": 0.06494743431632667,
-      "ed_inf": 0.15762204768127655
     }
   },
   {
@@ -200,17 +156,6 @@
   {
     "level": "level_5",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.14530559461066694,
-      "ed": 0.23122292353005713,
-      "fd_inf": 0.13954022946255396,
-      "ed_inf": 0.2267007695202211
-    }
-  },
-  {
-    "level": "level_5",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 9.372724825489641,
@@ -239,17 +184,6 @@
       "ed": 3.1053251031045814,
       "fd_inf": 12.76120426221907,
       "ed_inf": 3.0298231667223385
-    }
-  },
-  {
-    "level": "level_6",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.545469816077262,
-      "ed": 0.43856018266806146,
-      "fd_inf": 0.5310273377737063,
-      "ed_inf": 0.4306503573434069
     }
   },
   {
@@ -288,17 +222,6 @@
   {
     "level": "level_7",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.7460867989947579,
-      "ed": 0.5112233629438896,
-      "fd_inf": 0.724067332583059,
-      "ed_inf": 0.5022884083084025
-    }
-  },
-  {
-    "level": "level_7",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 43.95985703076003,
@@ -327,17 +250,6 @@
       "ed": 4.58270137796962,
       "fd_inf": 27.794414575276516,
       "ed_inf": 4.523985934918954
-    }
-  },
-  {
-    "level": "level_8",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.1246631379831082,
-      "ed": 0.6258201500937979,
-      "fd_inf": 1.098174872732729,
-      "ed_inf": 0.6186607455001524
     }
   },
   {
@@ -376,17 +288,6 @@
   {
     "level": "level_9",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.510080770701481,
-      "ed": 0.7067800302477141,
-      "fd_inf": 1.4988011929878533,
-      "ed_inf": 0.7018710414760021
-    }
-  },
-  {
-    "level": "level_9",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 71.60766880582744,
@@ -415,17 +316,6 @@
       "ed": 5.647285528056944,
       "fd_inf": 43.168077341896705,
       "ed_inf": 5.612817801366029
-    }
-  },
-  {
-    "level": "level_10",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.6789063469377963,
-      "ed": 0.7349594673133403,
-      "fd_inf": 1.6741561051850444,
-      "ed_inf": 0.7311464256157058
     }
   },
   {

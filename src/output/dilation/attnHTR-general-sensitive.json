@@ -24,17 +24,6 @@
   {
     "level": "level_1",
     "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.005934937370264848,
-      "ed": 0.049573652125380264,
-      "fd_inf": 0.005677358185102345,
-      "ed_inf": 0.04815513208030643
-    }
-  },
-  {
-    "level": "level_1",
-    "backend": "attnHTR-general-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 0.20860580680427177,
@@ -63,17 +52,6 @@
       "ed": 0.432925439027401,
       "fd_inf": 0.29865681165067204,
       "ed_inf": 0.41905008958719353
-    }
-  },
-  {
-    "level": "level_2",
-    "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.03545809817097689,
-      "ed": 0.12427203582200053,
-      "fd_inf": 0.033059358180474195,
-      "ed_inf": 0.12039722186265628
     }
   },
   {
@@ -112,17 +90,6 @@
   {
     "level": "level_3",
     "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.09368053715619773,
-      "ed": 0.2031612338805194,
-      "fd_inf": 0.08865818298742235,
-      "ed_inf": 0.19686677203747327
-    }
-  },
-  {
-    "level": "level_3",
-    "backend": "attnHTR-general-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 3.2372632541213306,
@@ -151,17 +118,6 @@
       "ed": 1.1838131745893596,
       "fd_inf": 2.1692676103503463,
       "ed_inf": 1.1510950234547783
-    }
-  },
-  {
-    "level": "level_4",
-    "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.23281401682692304,
-      "ed": 0.3222953980977663,
-      "fd_inf": 0.2207923896673562,
-      "ed_inf": 0.3127024810196921
     }
   },
   {
@@ -200,17 +156,6 @@
   {
     "level": "level_5",
     "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.499867130983894,
-      "ed": 0.48355109548855313,
-      "fd_inf": 0.47815458550541773,
-      "ed_inf": 0.47140061133654865
-    }
-  },
-  {
-    "level": "level_5",
-    "backend": "attnHTR-general-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 16.398930853211056,
@@ -239,17 +184,6 @@
       "ed": 3.065970225469976,
       "fd_inf": 12.975712587937018,
       "ed_inf": 3.0138310670737725
-    }
-  },
-  {
-    "level": "level_6",
-    "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.3977637687767581,
-      "ed": 0.8930819323771017,
-      "fd_inf": 1.350996547535694,
-      "ed_inf": 0.8756750909750558
     }
   },
   {
@@ -288,17 +222,6 @@
   {
     "level": "level_7",
     "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.8555012898316656,
-      "ed": 1.0578893346948806,
-      "fd_inf": 1.812774010480652,
-      "ed_inf": 1.0444616884349494
-    }
-  },
-  {
-    "level": "level_7",
-    "backend": "attnHTR-general-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 63.59188232755322,
@@ -327,17 +250,6 @@
       "ed": 4.121479905826224,
       "fd_inf": 22.881802242207502,
       "ed_inf": 4.084122389890011
-    }
-  },
-  {
-    "level": "level_8",
-    "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 2.3747393263420795,
-      "ed": 1.2328173873759327,
-      "fd_inf": 2.3491393890550785,
-      "ed_inf": 1.2249700368502057
     }
   },
   {
@@ -376,17 +288,6 @@
   {
     "level": "level_9",
     "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 2.855753581216839,
-      "ed": 1.3895250880096206,
-      "fd_inf": 2.8363998587278405,
-      "ed_inf": 1.384231058500872
-    }
-  },
-  {
-    "level": "level_9",
-    "backend": "attnHTR-general-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 109.09040147238551,
@@ -415,17 +316,6 @@
       "ed": 4.791205552176502,
       "fd_inf": 31.660454134958766,
       "ed_inf": 4.7699386706550255
-    }
-  },
-  {
-    "level": "level_10",
-    "backend": "attnHTR-general-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 3.158639770516853,
-      "ed": 1.4593229096630282,
-      "fd_inf": 3.151180791251985,
-      "ed_inf": 1.45710526652586
     }
   },
   {

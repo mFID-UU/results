@@ -24,17 +24,6 @@
   {
     "level": "level_1",
     "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.3515374006152614,
-      "ed": 0.3944137039745741,
-      "fd_inf": 0.350661417130393,
-      "ed_inf": 0.3926014200517574
-    }
-  },
-  {
-    "level": "level_1",
-    "backend": "attnHTR-iam-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 3.8549037326428106,
@@ -63,17 +52,6 @@
       "ed": 0.871590667450828,
       "fd_inf": 1.4495321029174593,
       "ed_inf": 0.874468729135731
-    }
-  },
-  {
-    "level": "level_2",
-    "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.7209341382453687,
-      "ed": 0.6840139428524419,
-      "fd_inf": 0.7163972998874262,
-      "ed_inf": 0.6809109492988731
     }
   },
   {
@@ -112,17 +90,6 @@
   {
     "level": "level_3",
     "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.2889159768909872,
-      "ed": 0.962199089898844,
-      "fd_inf": 1.283108981284689,
-      "ed_inf": 0.959658706249745
-    }
-  },
-  {
-    "level": "level_3",
-    "backend": "attnHTR-iam-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 13.176710566542198,
@@ -151,17 +118,6 @@
       "ed": 2.018309162526198,
       "fd_inf": 6.2192483497236255,
       "ed_inf": 2.0184901053430067
-    }
-  },
-  {
-    "level": "level_4",
-    "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 2.105770657322195,
-      "ed": 1.2547612497205762,
-      "fd_inf": 2.112789461809522,
-      "ed_inf": 1.2576190781516738
     }
   },
   {
@@ -200,17 +156,6 @@
   {
     "level": "level_5",
     "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 3.0715383736913813,
-      "ed": 1.55394363554803,
-      "fd_inf": 3.0839346786323483,
-      "ed_inf": 1.5589229075036812
-    }
-  },
-  {
-    "level": "level_5",
-    "backend": "attnHTR-iam-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 43.884886594721934,
@@ -239,17 +184,6 @@
       "ed": 3.0247874524154956,
       "fd_inf": 13.878921110623676,
       "ed_inf": 3.0149944924264913
-    }
-  },
-  {
-    "level": "level_6",
-    "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 4.191092533653405,
-      "ed": 1.8681490687215851,
-      "fd_inf": 4.2025460023845564,
-      "ed_inf": 1.8723811749779318
     }
   },
   {
@@ -288,17 +222,6 @@
   {
     "level": "level_7",
     "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 5.417729943778875,
-      "ed": 2.1831577848270984,
-      "fd_inf": 5.410454589138935,
-      "ed_inf": 2.1824300277723583
-    }
-  },
-  {
-    "level": "level_7",
-    "backend": "attnHTR-iam-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 90.98197084999364,
@@ -327,17 +250,6 @@
       "ed": 3.7753947355330766,
       "fd_inf": 20.87684770807792,
       "ed_inf": 3.7577366217714037
-    }
-  },
-  {
-    "level": "level_8",
-    "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 6.6948863147101925,
-      "ed": 2.475720345472206,
-      "fd_inf": 6.66684447904571,
-      "ed_inf": 2.470393405683267
     }
   },
   {
@@ -376,17 +288,6 @@
   {
     "level": "level_9",
     "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 7.7643442639250235,
-      "ed": 2.684146634318269,
-      "fd_inf": 7.726831396727772,
-      "ed_inf": 2.6776871449044637
-    }
-  },
-  {
-    "level": "level_9",
-    "backend": "attnHTR-iam-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 141.88380866401647,
@@ -415,17 +316,6 @@
       "ed": 4.238918702687274,
       "fd_inf": 25.392870984663364,
       "ed_inf": 4.219925064199296
-    }
-  },
-  {
-    "level": "level_10",
-    "backend": "attnHTR-iam-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 8.372964245852563,
-      "ed": 2.7849980952251028,
-      "fd_inf": 8.330897134302717,
-      "ed_inf": 2.7783377495778825
     }
   },
   {

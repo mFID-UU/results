@@ -24,17 +24,6 @@
   {
     "level": "level_1",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.4238659800342055,
-      "ed": 0.5982488532637144,
-      "fd_inf": 0.4200934214440637,
-      "ed_inf": 0.5972330132027863
-    }
-  },
-  {
-    "level": "level_1",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 13.374427121159542,
@@ -63,17 +52,6 @@
       "ed": 0.8831935399025019,
       "fd_inf": 2.1667868657107836,
       "ed_inf": 0.8915282903223465
-    }
-  },
-  {
-    "level": "level_2",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.7418992650711402,
-      "ed": 0.7846498558123927,
-      "fd_inf": 0.7435462115561636,
-      "ed_inf": 0.7869048148734711
     }
   },
   {
@@ -112,17 +90,6 @@
   {
     "level": "level_3",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.9504495362244261,
-      "ed": 0.8745705362777162,
-      "fd_inf": 0.9587569574361836,
-      "ed_inf": 0.8786119666144188
-    }
-  },
-  {
-    "level": "level_3",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 23.99532010133956,
@@ -151,17 +118,6 @@
       "ed": 1.0248803926069263,
       "fd_inf": 3.0485132592560205,
       "ed_inf": 1.0284186621499813
-    }
-  },
-  {
-    "level": "level_4",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.1171632069932431,
-      "ed": 0.9357667118245767,
-      "fd_inf": 1.1298869261547235,
-      "ed_inf": 0.9404971306045705
     }
   },
   {
@@ -200,17 +156,6 @@
   {
     "level": "level_5",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.2573881767182615,
-      "ed": 0.9826716445567087,
-      "fd_inf": 1.2733218413699456,
-      "ed_inf": 0.9877253339949085
-    }
-  },
-  {
-    "level": "level_5",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 30.45352005306276,
@@ -239,17 +184,6 @@
       "ed": 1.1629859550337944,
       "fd_inf": 3.74995357947018,
       "ed_inf": 1.159390533560486
-    }
-  },
-  {
-    "level": "level_6",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.3781219663764972,
-      "ed": 1.0215743491944176,
-      "fd_inf": 1.3966791822849445,
-      "ed_inf": 1.0268016135338174
     }
   },
   {
@@ -288,17 +222,6 @@
   {
     "level": "level_7",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.482211623115636,
-      "ed": 1.0541294441193945,
-      "fd_inf": 1.503555389947457,
-      "ed_inf": 1.0594276857544858
-    }
-  },
-  {
-    "level": "level_7",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 35.15950220088692,
@@ -327,17 +250,6 @@
       "ed": 1.2625380601859932,
       "fd_inf": 4.250053134134991,
       "ed_inf": 1.2570065368503138
-    }
-  },
-  {
-    "level": "level_8",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.5767018343224013,
-      "ed": 1.0827489733953188,
-      "fd_inf": 1.5992243811902123,
-      "ed_inf": 1.0879577634793574
     }
   },
   {
@@ -376,17 +288,6 @@
   {
     "level": "level_9",
     "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.655484461022748,
-      "ed": 1.1062954982031852,
-      "fd_inf": 1.678286759250045,
-      "ed_inf": 1.1113719569503953
-    }
-  },
-  {
-    "level": "level_9",
-    "backend": "attnHTR-imgur5k-sensitive",
     "pooling": "tpp",
     "metrics": {
       "fd": 38.34557728963432,
@@ -415,17 +316,6 @@
       "ed": 1.311887457068854,
       "fd_inf": 4.500464400546233,
       "ed_inf": 1.306045551294577
-    }
-  },
-  {
-    "level": "level_10",
-    "backend": "attnHTR-imgur5k-sensitive",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.7038801061734907,
-      "ed": 1.1205794659122361,
-      "fd_inf": 1.7256047070720417,
-      "ed_inf": 1.1254086777493957
     }
   },
   {

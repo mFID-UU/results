@@ -24,17 +24,6 @@
   {
     "level": "level_1",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.003941917812190443,
-      "ed": 0.024879593427595142,
-      "fd_inf": 0.0029575891368753826,
-      "ed_inf": 0.024868043167158294
-    }
-  },
-  {
-    "level": "level_1",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 0.18489193508435164,
@@ -63,17 +52,6 @@
       "ed": 0.2313686129137018,
       "fd_inf": 0.12108577909406432,
       "ed_inf": 0.22335122216315367
-    }
-  },
-  {
-    "level": "level_2",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.01275125278015743,
-      "ed": 0.055479519733827816,
-      "fd_inf": 0.01160919278217302,
-      "ed_inf": 0.05481581929165739
     }
   },
   {
@@ -112,17 +90,6 @@
   {
     "level": "level_3",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.034409135168584015,
-      "ed": 0.10020662050950091,
-      "fd_inf": 0.03261404525949976,
-      "ed_inf": 0.09881368623082726
-    }
-  },
-  {
-    "level": "level_3",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 1.4906841837479874,
@@ -151,17 +118,6 @@
       "ed": 0.8796945563915303,
       "fd_inf": 1.2678928271532854,
       "ed_inf": 0.8581143825692997
-    }
-  },
-  {
-    "level": "level_4",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.08084125573319279,
-      "ed": 0.16166125452627797,
-      "fd_inf": 0.07819250232512412,
-      "ed_inf": 0.1592448556110387
     }
   },
   {
@@ -200,17 +156,6 @@
   {
     "level": "level_5",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.15770381705090375,
-      "ed": 0.23539801387894013,
-      "fd_inf": 0.1539448009584903,
-      "ed_inf": 0.23247009854041886
-    }
-  },
-  {
-    "level": "level_5",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 5.912196556318534,
@@ -239,17 +184,6 @@
       "ed": 1.803863192729912,
       "fd_inf": 4.65208442616463,
       "ed_inf": 1.7872730658599325
-    }
-  },
-  {
-    "level": "level_6",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.2782585827198316,
-      "ed": 0.3201195872269854,
-      "fd_inf": 0.27170280039000505,
-      "ed_inf": 0.3167361659965617
     }
   },
   {
@@ -288,17 +222,6 @@
   {
     "level": "level_7",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.43695664156085456,
-      "ed": 0.4103842845625483,
-      "fd_inf": 0.4297084652339891,
-      "ed_inf": 0.40739669324124517
-    }
-  },
-  {
-    "level": "level_7",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 15.047912709791262,
@@ -327,17 +250,6 @@
       "ed": 2.7585517805808295,
       "fd_inf": 10.37948898652788,
       "ed_inf": 2.738921988932628
-    }
-  },
-  {
-    "level": "level_8",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.6281930588302118,
-      "ed": 0.5010176065438988,
-      "fd_inf": 0.61758002553768,
-      "ed_inf": 0.4975602853749576
     }
   },
   {
@@ -376,17 +288,6 @@
   {
     "level": "level_9",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.8448902917583947,
-      "ed": 0.5908729204851707,
-      "fd_inf": 0.8323212403526925,
-      "ed_inf": 0.5856153663756303
-    }
-  },
-  {
-    "level": "level_9",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 29.598119009345737,
@@ -415,17 +316,6 @@
       "ed": 3.5685718947279503,
       "fd_inf": 18.303575897791895,
       "ed_inf": 3.5415905859429406
-    }
-  },
-  {
-    "level": "level_10",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.0830978194523917,
-      "ed": 0.6728035054319257,
-      "fd_inf": 1.0682192496371703,
-      "ed_inf": 0.6673197509373521
     }
   },
   {

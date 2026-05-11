@@ -24,17 +24,6 @@
   {
     "level": "level_1",
     "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.004409955318746217,
-      "ed": 0.0265872410440939,
-      "fd_inf": 0.0038284688678120998,
-      "ed_inf": 0.02624164215987466
-    }
-  },
-  {
-    "level": "level_1",
-    "backend": "attnHTR-general",
     "pooling": "tpp",
     "metrics": {
       "fd": 0.19448406386804606,
@@ -63,17 +52,6 @@
       "ed": 0.2136962727010113,
       "fd_inf": 0.11946576908497197,
       "ed_inf": 0.2085153243465381
-    }
-  },
-  {
-    "level": "level_2",
-    "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.012814799855154657,
-      "ed": 0.0534972714316311,
-      "fd_inf": 0.011846191255903405,
-      "ed_inf": 0.05206015549951365
     }
   },
   {
@@ -112,17 +90,6 @@
   {
     "level": "level_3",
     "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.030556693799477674,
-      "ed": 0.09188693067252819,
-      "fd_inf": 0.02967896030906141,
-      "ed_inf": 0.08920081821664008
-    }
-  },
-  {
-    "level": "level_3",
-    "backend": "attnHTR-general",
     "pooling": "tpp",
     "metrics": {
       "fd": 1.4695014905586703,
@@ -151,17 +118,6 @@
       "ed": 0.7898158785158077,
       "fd_inf": 1.003464511268675,
       "ed_inf": 0.7703154776033967
-    }
-  },
-  {
-    "level": "level_4",
-    "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.06660034633261525,
-      "ed": 0.1484300258278176,
-      "fd_inf": 0.06338755831200427,
-      "ed_inf": 0.14499459632370437
     }
   },
   {
@@ -200,17 +156,6 @@
   {
     "level": "level_5",
     "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.13054855515084673,
-      "ed": 0.22105866292065193,
-      "fd_inf": 0.12693153832465268,
-      "ed_inf": 0.21765541065333988
-    }
-  },
-  {
-    "level": "level_5",
-    "backend": "attnHTR-general",
     "pooling": "tpp",
     "metrics": {
       "fd": 5.287698249751259,
@@ -239,17 +184,6 @@
       "ed": 1.6445822942809312,
       "fd_inf": 3.6444175062273136,
       "ed_inf": 1.6193992531831958
-    }
-  },
-  {
-    "level": "level_6",
-    "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.22826433015505265,
-      "ed": 0.3053109915630315,
-      "fd_inf": 0.2228397512224738,
-      "ed_inf": 0.3010378613776601
     }
   },
   {
@@ -288,17 +222,6 @@
   {
     "level": "level_7",
     "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.3553620122901253,
-      "ed": 0.3970007544845401,
-      "fd_inf": 0.3476175333199382,
-      "ed_inf": 0.392741949282279
-    }
-  },
-  {
-    "level": "level_7",
-    "backend": "attnHTR-general",
     "pooling": "tpp",
     "metrics": {
       "fd": 12.123140840911901,
@@ -327,17 +250,6 @@
       "ed": 2.5485312888217027,
       "fd_inf": 8.213670933988388,
       "ed_inf": 2.521878933346623
-    }
-  },
-  {
-    "level": "level_8",
-    "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.5119920273692324,
-      "ed": 0.49135462597636753,
-      "fd_inf": 0.5025231177819304,
-      "ed_inf": 0.487253500524913
     }
   },
   {
@@ -376,17 +288,6 @@
   {
     "level": "level_9",
     "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.7038460801523632,
-      "ed": 0.5848467556908695,
-      "fd_inf": 0.6934618888197719,
-      "ed_inf": 0.5802649726173519
-    }
-  },
-  {
-    "level": "level_9",
-    "backend": "attnHTR-general",
     "pooling": "tpp",
     "metrics": {
       "fd": 23.056923223247104,
@@ -415,17 +316,6 @@
       "ed": 3.3780280550266784,
       "fd_inf": 14.918522813639672,
       "ed_inf": 3.3446094320474957
-    }
-  },
-  {
-    "level": "level_10",
-    "backend": "attnHTR-general",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.931282476876119,
-      "ed": 0.6712120907597119,
-      "fd_inf": 0.917973212330105,
-      "ed_inf": 0.6654257969054146
     }
   },
   {

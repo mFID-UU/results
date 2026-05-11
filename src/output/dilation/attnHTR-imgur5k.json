@@ -24,17 +24,6 @@
   {
     "level": "level_1",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.004550032843161578,
-      "ed": 0.041924577782336075,
-      "fd_inf": 0.004337145253501742,
-      "ed_inf": 0.041362015206771824
-    }
-  },
-  {
-    "level": "level_1",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 0.08221215274242866,
@@ -63,17 +52,6 @@
       "ed": 0.3370655428365032,
       "fd_inf": 0.17726796845009865,
       "ed_inf": 0.3302871381424982
-    }
-  },
-  {
-    "level": "level_2",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.028436770843231596,
-      "ed": 0.1065589869264764,
-      "fd_inf": 0.026903023782428294,
-      "ed_inf": 0.10447222405864916
     }
   },
   {
@@ -112,17 +90,6 @@
   {
     "level": "level_3",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.06680270398667432,
-      "ed": 0.16710037207946105,
-      "fd_inf": 0.06435305228393032,
-      "ed_inf": 0.16435502296890178
-    }
-  },
-  {
-    "level": "level_3",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 1.2715190386892345,
@@ -151,17 +118,6 @@
       "ed": 0.9525009339927888,
       "fd_inf": 1.3813494421906714,
       "ed_inf": 0.9337254372556625
-    }
-  },
-  {
-    "level": "level_4",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.16599525092950973,
-      "ed": 0.2667794486787605,
-      "fd_inf": 0.16014487833335037,
-      "ed_inf": 0.26172785408858984
     }
   },
   {
@@ -200,17 +156,6 @@
   {
     "level": "level_5",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.34451828577941246,
-      "ed": 0.3955360256043826,
-      "fd_inf": 0.3340208624349734,
-      "ed_inf": 0.3887629295606132
-    }
-  },
-  {
-    "level": "level_5",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 6.638842670012764,
@@ -239,17 +184,6 @@
       "ed": 2.845111661978651,
       "fd_inf": 11.250703104089416,
       "ed_inf": 2.7958771688600623
-    }
-  },
-  {
-    "level": "level_6",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.0400394235876302,
-      "ed": 0.7257245922923213,
-      "fd_inf": 1.0095566677230798,
-      "ed_inf": 0.7159307681938744
     }
   },
   {
@@ -288,17 +222,6 @@
   {
     "level": "level_7",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.32976555402146,
-      "ed": 0.843310620923324,
-      "fd_inf": 1.3037074746614699,
-      "ed_inf": 0.8356771193151467
-    }
-  },
-  {
-    "level": "level_7",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 29.58771598409694,
@@ -327,17 +250,6 @@
       "ed": 4.407180577414238,
       "fd_inf": 26.005403698559018,
       "ed_inf": 4.352344234772344
-    }
-  },
-  {
-    "level": "level_8",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.7450837278305664,
-      "ed": 0.9880673088191827,
-      "fd_inf": 1.7250981285831113,
-      "ed_inf": 0.9821691811844332
     }
   },
   {
@@ -376,17 +288,6 @@
   {
     "level": "level_9",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 2.1136271660724724,
-      "ed": 1.1115410075527201,
-      "fd_inf": 2.090510857960044,
-      "ed_inf": 1.1044338444277428
-    }
-  },
-  {
-    "level": "level_9",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 56.45494010247201,
@@ -415,17 +316,6 @@
       "ed": 5.390153008294204,
       "fd_inf": 41.735154778243604,
       "ed_inf": 5.3808171777163025
-    }
-  },
-  {
-    "level": "level_10",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 2.93029190954659,
-      "ed": 1.3833485297415173,
-      "fd_inf": 2.9127794363107062,
-      "ed_inf": 1.3776664168021757
     }
   },
   {

@@ -24,17 +24,6 @@
   {
     "level": "level_1",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.11903573194275907,
-      "ed": 0.2629642273137393,
-      "fd_inf": 0.11820404473078579,
-      "ed_inf": 0.2624271218223253
-    }
-  },
-  {
-    "level": "level_1",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 2.180449760521128,
@@ -63,17 +52,6 @@
       "ed": 0.6593443116615779,
       "fd_inf": 1.1106711773788738,
       "ed_inf": 0.6659619727396471
-    }
-  },
-  {
-    "level": "level_2",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.3874022711188716,
-      "ed": 0.5081367654330016,
-      "fd_inf": 0.3869301343931377,
-      "ed_inf": 0.5078269313647957
     }
   },
   {
@@ -112,17 +90,6 @@
   {
     "level": "level_3",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 0.7318656114431645,
-      "ed": 0.7363186002726565,
-      "fd_inf": 0.7319999315109157,
-      "ed_inf": 0.7358294475713759
-    }
-  },
-  {
-    "level": "level_3",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 10.837781592340946,
@@ -151,17 +118,6 @@
       "ed": 1.5087762487439491,
       "fd_inf": 3.652558086136286,
       "ed_inf": 1.510215349604006
-    }
-  },
-  {
-    "level": "level_4",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.0168895000590845,
-      "ed": 0.8786773171279453,
-      "fd_inf": 1.0132789001091775,
-      "ed_inf": 0.8762370889248882
     }
   },
   {
@@ -200,17 +156,6 @@
   {
     "level": "level_5",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.2318064287597017,
-      "ed": 0.9649017222698476,
-      "fd_inf": 1.2233041403136895,
-      "ed_inf": 0.9615126642273812
-    }
-  },
-  {
-    "level": "level_5",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 20.993707339675794,
@@ -239,17 +184,6 @@
       "ed": 2.5542896677927964,
       "fd_inf": 8.67591040017413,
       "ed_inf": 2.5496573664323554
-    }
-  },
-  {
-    "level": "level_6",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.4181522415689525,
-      "ed": 1.0247129005083535,
-      "fd_inf": 1.4053833607561783,
-      "ed_inf": 1.02093827845554
     }
   },
   {
@@ -288,17 +222,6 @@
   {
     "level": "level_7",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.6049415519451071,
-      "ed": 1.078407611599131,
-      "fd_inf": 1.5877435975933294,
-      "ed_inf": 1.0740366172653844
-    }
-  },
-  {
-    "level": "level_7",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 34.13607563121009,
@@ -327,17 +250,6 @@
       "ed": 3.619313304649991,
       "fd_inf": 16.37536354456238,
       "ed_inf": 3.614659946772282
-    }
-  },
-  {
-    "level": "level_8",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.7849255245851015,
-      "ed": 1.1247011924338846,
-      "fd_inf": 1.7656875629329998,
-      "ed_inf": 1.1202766081560394
     }
   },
   {
@@ -376,17 +288,6 @@
   {
     "level": "level_9",
     "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 1.9876389912235555,
-      "ed": 1.1752390106925985,
-      "fd_inf": 1.9685890051748005,
-      "ed_inf": 1.1710329455216102
-    }
-  },
-  {
-    "level": "level_9",
-    "backend": "attnHTR-imgur5k",
     "pooling": "tpp",
     "metrics": {
       "fd": 47.09264987705914,
@@ -415,17 +316,6 @@
       "ed": 4.561490402414303,
       "fd_inf": 25.528905046012266,
       "ed_inf": 4.554750246884623
-    }
-  },
-  {
-    "level": "level_10",
-    "backend": "attnHTR-imgur5k",
-    "pooling": "cls",
-    "metrics": {
-      "fd": 2.1930148446513917,
-      "ed": 1.2269168259913896,
-      "fd_inf": 2.174526602384019,
-      "ed_inf": 1.2228890534996635
     }
   },
   {
