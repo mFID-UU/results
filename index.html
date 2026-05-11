@@ -214,8 +214,8 @@
                 user-select: none;
             }
             .ptog input {
-                width: 10px;
-                height: 10px;
+                width: 12px;
+                height: 12px;
                 margin: 0;
                 cursor: pointer;
                 accent-color: var(--accent);
@@ -543,7 +543,7 @@
                     </div>
                     <label class="rit" style="margin-top:7px" title="Pins the origin (level 0 = no degradation, score = 0). Disabled on log scale.">
                         <input type="checkbox" id="cb-show-l0" />
-                        <span>L0 origin</span>
+                        <span>Include ground truth</span>
                     </label>
                 </div>
 
@@ -657,7 +657,13 @@
             // ── Constants ─────────────────────────────────────────────────────────────────
 
             const DATA_BASE = "src/output";
-            const POOLINGS = ["cls", "mean", "max", "tpp"];
+            const ATTNHTR_POOLINGS     = ["mean", "max", "tpp"];
+            const TRANSFORMER_POOLINGS = ["mean", "max", "cls", "tpp"];
+
+            function poolingsFor(id) {
+                if (id.startsWith("attnHTR-")) return ATTNHTR_POOLINGS;
+                return TRANSFORMER_POOLINGS; // trocr-*, dinov3
+            }
 
             const FEAT_MODELS = [
                 "inceptionv3",
@@ -674,7 +680,7 @@
                 "attnHTR-imgur5k-sensitive",
             ];
 
-            const FLAT_SET = new Set(["inceptionv3", "hwd", "dinov3"]);
+            const FLAT_SET = new Set(["inceptionv3", "hwd"]);
             const SEQ_SET = new Set(
                 FEAT_MODELS.filter((id) => !FLAT_SET.has(id)),
             );
@@ -775,7 +781,7 @@
                             : new Set(
                                   saved
                                       .split(",")
-                                      .filter((p) => POOLINGS.includes(p)),
+                                      .filter((p) => poolingsFor(id).includes(p)),
                               ),
                     );
                 }
@@ -1210,7 +1216,7 @@
                             pool: "flat",
                         });
                     } else {
-                        for (const pool of POOLINGS) {
+                        for (const pool of poolingsFor(id)) {
                             if (!S.mpools.get(id)?.has(pool)) continue;
                             out.push({
                                 name: `${id}·${pool}`,
@@ -1419,7 +1425,7 @@
                 if (!row) return;
                 if (on) {
                     row.classList.add("active");
-                    for (const p of POOLINGS) {
+                    for (const p of poolingsFor(id)) {
                         const cb = document.getElementById(`pcb-${id}-${p}`);
                         if (cb) cb.checked = S.mpools.get(id)?.has(p) ?? false;
                     }
@@ -1473,7 +1479,7 @@
                             "pool-row" + (S.enabled.has(id) ? " active" : "");
                         poolRow.id = `pool-${id}`;
 
-                        for (const pool of POOLINGS) {
+                        for (const pool of poolingsFor(id)) {
                             const tog = document.createElement("label");
                             tog.className = "ptog";
                             const pcb = document.createElement("input");
