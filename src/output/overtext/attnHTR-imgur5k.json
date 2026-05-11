@@ -1,0 +1,442 @@
+[
+  {
+    "level": "level_1",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 0.9174773184387837,
+      "ed": 0.7811446226417886,
+      "fd_inf": 0.9279478707993223,
+      "ed_inf": 0.7896256766988466
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 1.6337105568508505,
+      "ed": 0.8654636149390044,
+      "fd_inf": 1.605305358894766,
+      "ed_inf": 0.8745948870391619
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.2581319110654916,
+      "ed": 0.3531805068074326,
+      "fd_inf": 0.25865164700563487,
+      "ed_inf": 0.35400890678971936
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 14.715878733437933,
+      "ed": 2.881987209325763,
+      "fd_inf": 14.699977359954197,
+      "ed_inf": 2.9117742682388545
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.4004997337419516,
+      "ed": 0.9676026856901314,
+      "fd_inf": 1.4210876858080155,
+      "ed_inf": 0.9785811901611708
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 2.5233260887979476,
+      "ed": 1.06044848530382,
+      "fd_inf": 2.4718299374035966,
+      "ed_inf": 1.0694074575380146
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.34816366399802456,
+      "ed": 0.43386032231840943,
+      "fd_inf": 0.34767977383622994,
+      "ed_inf": 0.43522465054448745
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 23.746600841144073,
+      "ed": 3.6741737961683527,
+      "fd_inf": 23.84088596641647,
+      "ed_inf": 3.7126365695562566
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.6211716437003494,
+      "ed": 1.0339643908488276,
+      "fd_inf": 1.6399392249076563,
+      "ed_inf": 1.0441689223315198
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 3.0702021901883683,
+      "ed": 1.1550183860318939,
+      "fd_inf": 2.9924756572229203,
+      "ed_inf": 1.1597982711111121
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.38520646330399133,
+      "ed": 0.46302753768387905,
+      "fd_inf": 0.3847037059034725,
+      "ed_inf": 0.4643364692110264
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 28.150401206560204,
+      "ed": 3.9722984639270797,
+      "fd_inf": 28.19382802971557,
+      "ed_inf": 4.010014232353409
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.7969615180692875,
+      "ed": 1.0823723877500386,
+      "fd_inf": 1.8099215104009858,
+      "ed_inf": 1.0909103279215528
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 3.5557555801266183,
+      "ed": 1.2409323270817265,
+      "fd_inf": 3.4507026341065816,
+      "ed_inf": 1.240136451296013
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.419376104719519,
+      "ed": 0.48466814179683776,
+      "fd_inf": 0.4176796268752246,
+      "ed_inf": 0.48546585550725235
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 31.504257130435747,
+      "ed": 4.178341707738667,
+      "fd_inf": 31.456819473977035,
+      "ed_inf": 4.211800125393611
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 1.950118643684629,
+      "ed": 1.1226870850176014,
+      "fd_inf": 1.9598430801065383,
+      "ed_inf": 1.1299579664936208
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 3.991918158755645,
+      "ed": 1.3204018322274196,
+      "fd_inf": 3.8747656795395065,
+      "ed_inf": 1.3155528014466802
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.4537888328328936,
+      "ed": 0.5035138488712464,
+      "fd_inf": 0.4511043956005343,
+      "ed_inf": 0.5036865413116647
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 34.291350728184085,
+      "ed": 4.342452142436936,
+      "fd_inf": 34.180658342027314,
+      "ed_inf": 4.371988914347156
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.0807967278799113,
+      "ed": 1.1557173103148757,
+      "fd_inf": 2.088182126480337,
+      "ed_inf": 1.1621202989143866
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 4.3616482616512435,
+      "ed": 1.3865972515807907,
+      "fd_inf": 4.239960597028218,
+      "ed_inf": 1.3792159443002063
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.4857859834348397,
+      "ed": 0.5196069727512654,
+      "fd_inf": 0.4828062023119326,
+      "ed_inf": 0.5193117457113313
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 36.614033830314554,
+      "ed": 4.473624766489609,
+      "fd_inf": 36.45273556347728,
+      "ed_inf": 4.500155720425494
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.1920778412119413,
+      "ed": 1.1823178083056087,
+      "fd_inf": 2.1997466794129497,
+      "ed_inf": 1.1884851168203023
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 4.657223827922991,
+      "ed": 1.4365581738432924,
+      "fd_inf": 4.5335175490431965,
+      "ed_inf": 1.4279773454747309
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.5143074899993239,
+      "ed": 0.5330806369362663,
+      "fd_inf": 0.5111158100911297,
+      "ed_inf": 0.5327012449477826
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 38.56216962748792,
+      "ed": 4.577978554087462,
+      "fd_inf": 38.39077130326491,
+      "ed_inf": 4.6035876502577295
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.285430798381838,
+      "ed": 1.2034353849089545,
+      "fd_inf": 2.2938719676860715,
+      "ed_inf": 1.2097248829151415
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 4.880193335042222,
+      "ed": 1.4707755401505562,
+      "fd_inf": 4.754778875051607,
+      "ed_inf": 1.4621239259713577
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.5399689513114145,
+      "ed": 0.5448232986305913,
+      "fd_inf": 0.5370568464977611,
+      "ed_inf": 0.544640767584326
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 40.19398808791534,
+      "ed": 4.660473284962466,
+      "fd_inf": 40.03961048023679,
+      "ed_inf": 4.686599549124812
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.357681334107789,
+      "ed": 1.218839630188015,
+      "fd_inf": 2.3665853885565795,
+      "ed_inf": 1.2255728856230201
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 5.031288434413707,
+      "ed": 1.49144792118551,
+      "fd_inf": 4.906975541937181,
+      "ed_inf": 1.483775367616823
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.5622384141533798,
+      "ed": 0.5550016868962785,
+      "fd_inf": 0.5599631356514735,
+      "ed_inf": 0.5552020356340139
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 41.43902321484947,
+      "ed": 4.719436933588835,
+      "fd_inf": 41.3057950578134,
+      "ed_inf": 4.746984437918174
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 2.3975010996754857,
+      "ed": 1.2263456766640113,
+      "fd_inf": 2.4060291428434617,
+      "ed_inf": 1.2332078814125056
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "max",
+    "metrics": {
+      "fd": 5.099663653441709,
+      "ed": 1.4982675818056743,
+      "fd_inf": 4.975968172204516,
+      "ed_inf": 1.491062113578622
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.5759246161482778,
+      "ed": 0.5616417569705608,
+      "fd_inf": 0.574028526484302,
+      "ed_inf": 0.562084937886855
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "attnHTR-imgur5k",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 42.12665746709371,
+      "ed": 4.748607683826507,
+      "fd_inf": 42.0037657758327,
+      "ed_inf": 4.777027220379819
+    }
+  }
+]

@@ -1,0 +1,442 @@
+[
+  {
+    "level": "level_1",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 5.087323955544878,
+      "ed": 1.7032619032157845,
+      "fd_inf": 5.072482928828461,
+      "ed_inf": 1.7133391775350515
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 26.604535347157736,
+      "ed": 3.249926445799902,
+      "fd_inf": 24.203016275026467,
+      "ed_inf": 3.2809058855862983
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.19792450422165686,
+      "ed": 0.31828952045029657,
+      "fd_inf": 0.1966759950284216,
+      "ed_inf": 0.31976821496804814
+    }
+  },
+  {
+    "level": "level_1",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 52.80574065856655,
+      "ed": 5.212953651953155,
+      "fd_inf": 52.526746424930735,
+      "ed_inf": 5.241934289760167
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 9.522347418206252,
+      "ed": 2.435028774595547,
+      "fd_inf": 9.508220074384248,
+      "ed_inf": 2.4479977690708736
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 40.68261065585915,
+      "ed": 4.260083086065977,
+      "fd_inf": 37.85478269839654,
+      "ed_inf": 4.2989446100107775
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.38938485389752353,
+      "ed": 0.47384477911493894,
+      "fd_inf": 0.3877532879402784,
+      "ed_inf": 0.4761514399298599
+    }
+  },
+  {
+    "level": "level_2",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 96.3117866426542,
+      "ed": 7.463725402116083,
+      "fd_inf": 95.9333396144387,
+      "ed_inf": 7.502603893779618
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 11.82952032337339,
+      "ed": 2.7686060671788044,
+      "fd_inf": 11.83492968349605,
+      "ed_inf": 2.784031117611886
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 46.499159173371254,
+      "ed": 4.673492332588294,
+      "fd_inf": 43.616823305343054,
+      "ed_inf": 4.715148880463927
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.47032658474895883,
+      "ed": 0.5307514339574836,
+      "fd_inf": 0.46922903482642336,
+      "ed_inf": 0.5336569216283289
+    }
+  },
+  {
+    "level": "level_3",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 119.55680870551993,
+      "ed": 8.541682286786388,
+      "fd_inf": 119.33034958988758,
+      "ed_inf": 8.588561185904851
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 13.470598740526377,
+      "ed": 2.9853477115614435,
+      "fd_inf": 13.491421560450501,
+      "ed_inf": 3.0019519179833063
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 50.34448837442886,
+      "ed": 4.939377492271862,
+      "fd_inf": 47.36478704683381,
+      "ed_inf": 4.97974430240456
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.5246832656772649,
+      "ed": 0.5632433573670084,
+      "fd_inf": 0.523682094631558,
+      "ed_inf": 0.5662863497309014
+    }
+  },
+  {
+    "level": "level_4",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 136.05747850639057,
+      "ed": 9.246205436114238,
+      "fd_inf": 135.96102648563826,
+      "ed_inf": 9.297428668210838
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 14.64833608282947,
+      "ed": 3.12858016140474,
+      "fd_inf": 14.682330768937154,
+      "ed_inf": 3.1463437833761523
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 53.28354815845108,
+      "ed": 5.133432453242633,
+      "fd_inf": 50.23265044616553,
+      "ed_inf": 5.171267722219125
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.5681935420355466,
+      "ed": 0.5861659524226135,
+      "fd_inf": 0.5672513041846322,
+      "ed_inf": 0.5892691642730964
+    }
+  },
+  {
+    "level": "level_5",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 147.89352847178128,
+      "ed": 9.716831475431494,
+      "fd_inf": 147.91056882578397,
+      "ed_inf": 9.771786202032498
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 15.47121575100973,
+      "ed": 3.2191747626101836,
+      "fd_inf": 15.519058836165811,
+      "ed_inf": 3.238312717524907
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 55.6950907078911,
+      "ed": 5.284690999019476,
+      "fd_inf": 52.531435494437076,
+      "ed_inf": 5.317152976731006
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.6043895352492503,
+      "ed": 0.6032914765770011,
+      "fd_inf": 0.6034692165931573,
+      "ed_inf": 0.6063672434917087
+    }
+  },
+  {
+    "level": "level_6",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 156.21227752170415,
+      "ed": 10.024643379854288,
+      "fd_inf": 156.35973842825675,
+      "ed_inf": 10.083588600400443
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 16.025217760755176,
+      "ed": 3.272914181080876,
+      "fd_inf": 16.083383226149206,
+      "ed_inf": 3.29321050885152
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 57.67159838634046,
+      "ed": 5.405140521188014,
+      "fd_inf": 54.41560458735892,
+      "ed_inf": 5.433079133258725
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.6368089702188382,
+      "ed": 0.6178442530242726,
+      "fd_inf": 0.6358504427874517,
+      "ed_inf": 0.6208449467385093
+    }
+  },
+  {
+    "level": "level_7",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 161.8705462956247,
+      "ed": 10.218051229782429,
+      "fd_inf": 162.1229484311028,
+      "ed_inf": 10.280260854392507
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 16.401675840134317,
+      "ed": 3.3044690619148285,
+      "fd_inf": 16.46722096280538,
+      "ed_inf": 3.3255833294692088
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 59.12317179647846,
+      "ed": 5.487419400990995,
+      "fd_inf": 55.790332982506136,
+      "ed_inf": 5.513618694259179
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.6693407262407967,
+      "ed": 0.6334842806830071,
+      "fd_inf": 0.6683379013807759,
+      "ed_inf": 0.6364752185941058
+    }
+  },
+  {
+    "level": "level_8",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 165.51846339648034,
+      "ed": 10.328018823520134,
+      "fd_inf": 165.85892321131635,
+      "ed_inf": 10.393196901959632
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 16.681445142206602,
+      "ed": 3.3275135399625984,
+      "fd_inf": 16.746649359041353,
+      "ed_inf": 3.3483321780721234
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 60.00953194811538,
+      "ed": 5.532608843594164,
+      "fd_inf": 56.6748658828906,
+      "ed_inf": 5.558880218429034
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.7004743385464658,
+      "ed": 0.6502926705316596,
+      "fd_inf": 0.6993313480858734,
+      "ed_inf": 0.6533225282798208
+    }
+  },
+  {
+    "level": "level_9",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 167.51440567316544,
+      "ed": 10.372581713830773,
+      "fd_inf": 167.86292438129115,
+      "ed_inf": 10.438098977675027
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "trocr-riksarkivet",
+    "pooling": "mean",
+    "metrics": {
+      "fd": 16.870587325280948,
+      "ed": 3.3440837377234622,
+      "fd_inf": 16.932757191839297,
+      "ed_inf": 3.3645957891298557
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "trocr-riksarkivet",
+    "pooling": "max",
+    "metrics": {
+      "fd": 60.218731512772194,
+      "ed": 5.533023473472081,
+      "fd_inf": 56.90596280490858,
+      "ed_inf": 5.5596510321943695
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "trocr-riksarkivet",
+    "pooling": "cls",
+    "metrics": {
+      "fd": 0.7221635857443758,
+      "ed": 0.6625409643435457,
+      "fd_inf": 0.7208395796393919,
+      "ed_inf": 0.6655929331890722
+    }
+  },
+  {
+    "level": "level_10",
+    "backend": "trocr-riksarkivet",
+    "pooling": "tpp",
+    "metrics": {
+      "fd": 168.34494295861185,
+      "ed": 10.376333064993238,
+      "fd_inf": 168.65460932040915,
+      "ed_inf": 10.441587776868637
+    }
+  }
+]
