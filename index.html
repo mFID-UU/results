@@ -540,6 +540,10 @@
                         <label class="rit"><input type="checkbox" id="cb-show-ed" checked /><span>ED</span></label>
                         <label class="rit"><input type="checkbox" id="cb-show-edinf" /><span>ED∞</span></label>
                     </div>
+                    <label class="rit" style="margin-top:7px" title="Pins the origin (level 0 = no degradation, score = 0). Disabled on log scale.">
+                        <input type="checkbox" id="cb-show-l0" />
+                        <span>L0 origin</span>
+                    </label>
                 </div>
 
                 <div class="sb-sec">
@@ -791,6 +795,7 @@
                 showFd: true,
                 showFdInf: false,
                 showEd: true,
+                showL0: false,
                 showEdInf: false,
             };
 
@@ -983,9 +988,10 @@
                         const solo = FLAT_SET.has(id);
                         const name = solo ? id : `${id}·${pool}`;
 
+                        const useL0 = S.showL0 && S.yScale !== "log";
                         traces.push({
-                            x: levels,
-                            y: ys,
+                            x: useL0 ? [0, ...levels] : levels,
+                            y: useL0 ? [0, ...ys]     : ys,
                             mode: "lines+markers",
                             name,
                             legendgroup: id,
@@ -1080,8 +1086,13 @@
                     xaxis: {
                         title: { text: "Degradation Level", standoff: 8 },
                         tickfont: TICK_FONT,
-                        tickvals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-                        range: [0.5, 10.5],
+                        tickvals: S.showL0 && S.yScale !== "log"
+                            ? [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                            : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                        ticktext: S.showL0 && S.yScale !== "log"
+                            ? ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+                            : undefined,
+                        range: S.showL0 && S.yScale !== "log" ? [-0.5, 10.5] : [0.5, 10.5],
                         ...AXIS_BASE,
                     },
                     yaxis: {
@@ -1568,9 +1579,16 @@
                 document.querySelectorAll('input[name="ys"]').forEach((r) =>
                     r.addEventListener("change", (e) => {
                         S.yScale = e.target.value;
+                        const l0cb = document.getElementById("cb-show-l0");
+                        l0cb.disabled = S.yScale === "log";
                         render();
                     }),
                 );
+
+                document.getElementById("cb-show-l0").addEventListener("change", (e) => {
+                    S.showL0 = e.target.checked;
+                    render();
+                });
 
                 document
                     .getElementById("sel-norm")
